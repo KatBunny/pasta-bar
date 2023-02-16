@@ -3,6 +3,7 @@
 const mongoose = require("mongoose")
 const SALT_ROUNDS = 6
 const bcrypt = require("bcrypt")
+const { boolean } = require("webidl-conversions")
 
 const Schema = mongoose.Schema
 
@@ -20,6 +21,11 @@ const userSchema = new Schema({
       trim: true,
       minLength: 3,
       required: true
+    },
+    isAdmin: {
+      type: boolean,
+      required: true,
+      default: false
     }
 },{
     timestamps: true,
