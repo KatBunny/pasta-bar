@@ -1,6 +1,6 @@
 import {checkToken} from "../../utilities/users-service"
 
-export default function OrderHistoryPage() {
+export default function PastOrdersPage() {
 
     function handleCheckToken() {
         checkToken()
@@ -9,7 +9,7 @@ export default function OrderHistoryPage() {
 
     return (
     <>
-        <h2>Order History Page</h2>
+        <h2>Past Orders Page</h2>
         <button onClick={handleCheckToken}>Check When My Login Expires</button>
     </>
     )
