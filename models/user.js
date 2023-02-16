@@ -7,8 +7,12 @@ const { boolean } = require("webidl-conversions")
 
 const Schema = mongoose.Schema
 
-const userSchema = new Schema({
-    name: {type: String, required: true},
+const userSchema = new Schema(
+  {
+    name: {
+      type: String,
+      required: true
+    },
     email: {
       type: String,
       unique: true,
@@ -27,7 +31,8 @@ const userSchema = new Schema({
       required: true,
       default: false
     }
-},{
+  },
+  {
     timestamps: true,
     toJSON: {
         transform: function(doc, user) {
@@ -35,7 +40,8 @@ const userSchema = new Schema({
           return user;
         }
     }
-})
+  }
+)
 
 userSchema.pre("save", async function(next) {
     if( !this.isModified("password")) return next()
