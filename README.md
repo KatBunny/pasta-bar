@@ -1,3 +1,14 @@
+### For the Development Team
+- Fork and Clone this repo
+- cd pasta-bar
+- checkout a new branch
+- npm i
+- touch .env (Andrew will send development db connection info)
+- npm run build
+- npm start, nodemon server
+
+
+
 # iPasta!
 
 ## Problem
