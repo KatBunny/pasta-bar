@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import NavBar from "../../components/NavBar/NavBar";
 import AuthPage from "../AuthPage/AuthPage"
 import NewOrderPage from "../NewOrderPage/NewOrderPage";
-import OrderHistoryPage from "../OrderHistoryPage/OrderHistoryPage";
+// import OrderHistoryPage from "../OrderHistoryPage/OrderHistoryPage";
 import './App.css';
 import { getUser } from "../../utilities/users-service"
 
@@ -23,7 +23,7 @@ export default function App() {
           <Routes>
             <Route path="/" element="" />
             <Route path="/orders/new" element={<NewOrderPage />}/>
-            <Route path="/orders" element={<OrderHistoryPage />}/>
+            {/* <Route path="/orders" element={<OrderHistoryPage />}/> */}
           </Routes>
         </>
         :
