@@ -1,3 +1,5 @@
+//-----Backend User Models-----//
+
 const mongoose = require("mongoose")
 const SALT_ROUNDS = 6
 const bcrypt = require("bcrypt")
