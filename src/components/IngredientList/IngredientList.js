@@ -1,1 +1,1 @@
-// Each ingredient item
+// Container for all ingredients to show
