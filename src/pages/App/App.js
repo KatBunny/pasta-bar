@@ -10,6 +10,7 @@ import EditMenuPage from "../EditMenuPage/EditMenuPage";
 
 export default function App() {
   const [user, setUser] = useState(getUser());
+  const [allIngredients, setAllIngredients] = useState([])
 
   return (
     <main className="App">
@@ -21,7 +22,7 @@ export default function App() {
           <Routes>
             {user.isAdmin && <Route path="/admin" element={<EditMenuPage />} />}
             {user.isAdmin && <Route path="/*" element={<Navigate to="/admin" />} />}
-            <Route path="/orders/new" element={<NewOrderPage />} />
+            <Route path="/orders/new" element={<NewOrderPage allIngredients={{allIngredients}}/>} />
             <Route path="/orders" element={<PastOrdersPage user={user} setUser={setUser}/>} />
             <Route path="/*" element={<Navigate to="/orders/new" />} />
           </Routes>
