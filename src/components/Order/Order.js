@@ -1,12 +1,12 @@
 // Order listing ingredients added
 
 export default function Order({order}){
-    // need to map order.ingredients
-
+    const ingredientItems = order.ingredients.map((ingredient, index) => (<p key={index}>{ingredient.name}</p>))
     return(
         <>
             <p>Order: {order._id}</p>
-            <p>Ingredients: {order.ingredients}</p>
+            <p>Ingredients:</p>
+            {ingredientItems}
         </>
     )
 }
