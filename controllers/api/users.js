@@ -21,8 +21,8 @@ async function create(req, res, next) {
         const token = createJWT(user)
 
         console.log(token)
-        res.json({ token: token })
-        //res.json(token) //I think this is the full json payload
+        // res.json({ token: token })
+        res.json(token) //I think this is the full json payload
         
       } catch (error) {
         console.error(error)
