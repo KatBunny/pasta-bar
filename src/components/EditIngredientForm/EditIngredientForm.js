@@ -2,8 +2,14 @@
 export default function EditIngredientForm(){
     return (
         <form>
-            <label>Change Ingredient</label>
-            <input placeholder="Change"></input>
+            <label>Ingredient Name</label>
+            <input placeholder="Name" />
+            <label>Ingredient Image</label>
+            <input placeholder="Image" />
+            <label>Ingredient Price</label>
+            <input placeholder="Price" />
+            <button>Update Ingredient</button>
+            <button>Delete Ingredient</button>
         </form>
     )
 }
