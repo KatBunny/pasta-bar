@@ -8,7 +8,7 @@ export default function PastOrdersList({ user, setUser, myOrders }){
 
     return(
         <>
-            {myOrderItems ? "No orders yet" : "Your orders"}
+            {myOrderItems}
         </>
     )
 }

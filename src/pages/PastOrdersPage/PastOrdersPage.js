@@ -1,19 +1,22 @@
+import { useState, useEffect } from "react"
 import PastOrdersList from "../../components/PastOrdersList/PastOrdersList"
 import * as ordersAPI from "../../utilities/orders-api"
 
 export default function PastOrdersPage(){
-    const myOrders = []
+    const [showOrders, setShowOrders] = useState([])
 
-    async function getOrders(){
-        myOrders.push(await ordersAPI.show())
-    }
-    
-    getOrders()
+    useEffect(function(){
+        async function getOrders(){
+            const orders = await ordersAPI.show()
+            setShowOrders(orders)
+        }
+        getOrders()
+    }, [])
 
     return(
         <>
             <p>Past orders page</p>
-            <PastOrdersList myOrders={myOrders}/>
+            <PastOrdersList myOrders={showOrders}/>
         </>
     )
 } 

@@ -5,8 +5,8 @@ export default function Order({order}){
 
     return(
         <>
-            <p>{order._id}</p>
-            <p>{order.ingredients}</p>
+            <p>Order: {order._id}</p>
+            <p>Ingredients: {order.ingredients}</p>
         </>
     )
 }
