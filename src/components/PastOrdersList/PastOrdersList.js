@@ -2,13 +2,13 @@
 import Order from "../Order/Order"
 
 export default function PastOrdersList({ user, setUser, myOrders }){
-
+    console.log(myOrders)
     // map myOrders
-    const myOrderItem = myOrders.map((myOrder, index) => (<Order order={myOrder}/>))
+    const myOrderItems = myOrders.map((myOrder, index) => (<Order order={myOrder} key={index}/>))
 
     return(
         <>
-            <Order order={myOrderItem}/>
+            {myOrderItems ? "No orders yet" : "Your orders"}
         </>
     )
 }
