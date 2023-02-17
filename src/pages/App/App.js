@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import NavBar from "../../components/NavBar/NavBar";
 import AuthPage from "../AuthPage/AuthPage";
 import NewOrderPage from "../NewOrderPage/NewOrderPage";
@@ -10,11 +10,6 @@ import EditMenuPage from "../EditMenuPage/EditMenuPage";
 
 export default function App() {
   const [user, setUser] = useState(getUser());
-  //const [user, setUser] = useState(null)
-  // let adminStuff = "";
-  // if (user.isAdmin) {
-  //   adminStuff = ;
-  // }
 
   return (
     <main className="App">
@@ -24,10 +19,11 @@ export default function App() {
         <>
           <NavBar user={user} setUser={setUser} />
           <Routes>
-            <Route path="/admin" element={<EditMenuPage />}/>
-            <Route path="/" element="" />
+            {user.isAdmin && <Route path="/admin" element={<EditMenuPage />} />}
+            {user.isAdmin && <Route path="/*" element={<Navigate to="/admin" />} />}
             <Route path="/orders/new" element={<NewOrderPage />} />
             <Route path="/orders" element={<PastOrdersPage />} />
+            <Route path="/*" element={<Navigate to="/orders/new" />} />
           </Routes>
         </>
       ) : (
