@@ -1,9 +1,11 @@
 // Order listing ingredients added
 
-export default function Order(){
+
+export default function Order({order}){
     return(
         <>
-            <p>order item</p>
+            <p>{order._id}</p>
+            <p>{order.ingredients}</p>
         </>
     )
 }
