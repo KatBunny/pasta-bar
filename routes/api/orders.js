@@ -10,7 +10,9 @@ const ensureLoggedIn = require('../../config/ensureLoggedIn');
 
 
 //Show Past Orders
-//router.get("/", ensureLoggedIn, ordersCtrl.show)
+router.get("/", ensureLoggedIn, ordersCtrl.show)
 
 //Create New Order
-// router.post("/new", ensureLoggedIn, ordersCtrl.create)
+router.post("/new", ensureLoggedIn, ordersCtrl.create)
+
+module.exports = router

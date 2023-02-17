@@ -11,15 +11,16 @@ const ensureIsAdmin = require('../../config/ensureIsAdmin');
 // Base Route: /api/ingredients
 
 
-
 //Show Ingredients
-//router.get("/", ensureLoggedIn, ingredientsCtrl.show)
+router.get("/", ensureLoggedIn, ingredientsCtrl.show)
 
 //Create New Ingredient
-//router.post("/new", ensureIsAdmin, ingredientsCtrl.create)
+router.post("/new", ensureIsAdmin, ingredientsCtrl.create)
 
-//Delete ingredient
-//router.delete("/:id", ensureIsAdmin, ingredientsCtrl.delete)
+//Delete (remove) ingredient
+router.delete("/:id", ensureIsAdmin, ingredientsCtrl.remove)
 
 //Update Ingredient
-//router.patch("/:id", ensureIsAdmin, ingredientsCtrl.update)
+router.patch("/:id", ensureIsAdmin, ingredientsCtrl.update)
+
+module.exports = router
