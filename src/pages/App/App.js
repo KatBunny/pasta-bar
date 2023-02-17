@@ -22,7 +22,7 @@ export default function App() {
             {user.isAdmin && <Route path="/admin" element={<EditMenuPage />} />}
             {user.isAdmin && <Route path="/*" element={<Navigate to="/admin" />} />}
             <Route path="/orders/new" element={<NewOrderPage />} />
-            <Route path="/orders" element={<PastOrdersPage />} />
+            <Route path="/orders" element={<PastOrdersPage user={user} setUser={setUser}/>} />
             <Route path="/*" element={<Navigate to="/orders/new" />} />
           </Routes>
         </>
