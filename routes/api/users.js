@@ -6,17 +6,16 @@ const router = express.Router()
 const usersCtrl = require('../../controllers/api/users');
 const ensureLoggedIn = require('../../config/ensureLoggedIn');
 
+// Base Route: /api/users
 
-// POST /api/users
-//req, res, next apply here, pass to .create
-router.post('/', usersCtrl.create);
+// Sign Up
+router.post('/', usersCtrl.create)
 
-//Login Route
+// Login
 router.post("/login", usersCtrl.login)
 
 //Check Token
-router.get("/check-token", ensureLoggedIn, usersCtrl.checkToken)
-
+//router.get("/check-token", ensureLoggedIn, usersCtrl.checkToken)
 
 
 module.exports = router
