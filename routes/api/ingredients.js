@@ -17,12 +17,12 @@ router.get("/", ingredientsCtrl.show)
 
 ////////ensureIsAdmin
 //Create New Ingredient 
-router.post("/new", ensureLoggedIn, ingredientsCtrl.create)
+router.post("/new", ensureIsAdmin, ingredientsCtrl.create)
 
 //Delete (remove) ingredient
-router.delete("/:id", ensureLoggedIn, ingredientsCtrl.remove)
+router.delete("/:id", ensureIsAdmin, ingredientsCtrl.remove)
 
 //Update Ingredient
-router.patch("/:id", ensureLoggedIn, ingredientsCtrl.update)
+router.patch("/:id", ensureIsAdmin, ingredientsCtrl.update)
 
 module.exports = router
