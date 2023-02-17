@@ -1,11 +1,12 @@
 //-----Backend Orders Controllers-----//
 
+const ingredient = require("../../models/ingredient")
 const Order = require("../../models/order")
 
 //show the user's past orders
 async function show(req, res, next) {
     try {
-        const orders = await Order.find({user: {$eq: req.user._id}})
+        const orders = await Order.find({user: {$eq: req.user._id}}).populate("ingredients")
         //const orders = await Order.find({})
         res.json(orders)
     } catch (error) {
