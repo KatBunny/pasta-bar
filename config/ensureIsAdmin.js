@@ -2,7 +2,7 @@ module.exports = function(req, res, next) {
     
     // console.log("User: " + req.user)
     // Status code of 401 is Unauthorized
-    if (!req.user.isAdmin) return res.status(401).json('Unauthorized');
+    if (!req.user || !req.user.isAdmin) return res.status(401).json('Unauthorized');
     // A okay
     next();
   };
