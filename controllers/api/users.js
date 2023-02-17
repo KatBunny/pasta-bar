@@ -21,7 +21,7 @@ async function create(req, res, next) {
         const token = createJWT(user)
 
         console.log(token)
-        // res.json({ token: token })
+        //res.json({ token: token })
         res.json(token) //I think this is the full json payload
         
       } catch (error) {
@@ -45,8 +45,8 @@ async function login(req, res, next) {
         if (passwordsMatch) {
             const token = createJWT(user)
             console.log(token)
-            res.json({ token: token })
-            //res.json(token)
+            //res.json({ token: token })
+            res.json(token)
         } else {
             throw new Error()
         }
