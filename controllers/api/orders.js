@@ -14,7 +14,6 @@ async function show(req, res, next) {
     }
 }
 
-
 //create a new order
 async function create(req, res, next) {
     try {
