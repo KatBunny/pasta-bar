@@ -43,8 +43,15 @@ async function remove(req, res, next) {
 async function update(req, res, next) {
     try {
         const ingredient = await Ingredients.findById(req.params.id)
+       
+        console.log(ingredient)
+        console.log(req.body.ingredient)
+        
         ingredient.updateOne(req.body.ingredient)
+
         res.sendStatus(204)
+        return ingredient.save()
+
     } catch (error) {
         console.error(error)
         res.status(400).json(error)

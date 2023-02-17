@@ -12,15 +12,17 @@ const ensureIsAdmin = require('../../config/ensureIsAdmin');
 
 
 //Show Ingredients
-router.get("/", ensureLoggedIn, ingredientsCtrl.show)
+router.get("/", ingredientsCtrl.show)
 
-//Create New Ingredient
-router.post("/new", ensureIsAdmin, ingredientsCtrl.create)
+
+////////ensureIsAdmin
+//Create New Ingredient 
+router.post("/new", ensureLoggedIn, ingredientsCtrl.create)
 
 //Delete (remove) ingredient
-router.delete("/:id", ensureIsAdmin, ingredientsCtrl.remove)
+router.delete("/:id", ensureLoggedIn, ingredientsCtrl.remove)
 
 //Update Ingredient
-router.patch("/:id", ensureIsAdmin, ingredientsCtrl.update)
+router.patch("/:id", ensureLoggedIn, ingredientsCtrl.update)
 
 module.exports = router
