@@ -22,6 +22,8 @@ const PORT = process.env.PORT || 3001
 
 //Routes
 app.use("/api/users", require("./routes/api/users.js"))
+//app.use("/api/orders", require("./routes/api/orders.js"))
+//app.use("/api/ingredients", require("./routes/api/ingredients.js"))
 
 //Catch-all route, all other routes go above here
 app.get("/*", function(req, res) {
