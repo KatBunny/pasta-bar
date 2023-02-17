@@ -6,6 +6,7 @@ const Order = require("../../models/order")
 async function show(req, res, next) {
     try {
         const orders = await Order.find({user: {$eq: req.user._id}})
+        //const orders = await Order.find({})
         res.json(orders)
     } catch (error) {
         console.error(error)
