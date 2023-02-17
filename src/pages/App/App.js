@@ -10,31 +10,6 @@ import EditMenuPage from "../EditMenuPage/EditMenuPage";
 
 export default function App() {
   const [user, setUser] = useState(getUser());
-  //const [user, setUser] = useState(null)
-  // let adminStuff = "";
-  // if (user.isAdmin) {
-  //   adminStuff = ;
-  // }
-
-  // return (
-  //   <main className="App">
-  //     <h1>iPasta!</h1>
-  //     {/* terinary for conditional rendering */}
-  //     {user ? (
-  //       <>
-  //         <NavBar user={user} setUser={setUser} />
-  //         <Routes>
-  //           <Route path="/admin" element={<EditMenuPage />}/>
-  //           <Route path="/" element="" />
-  //           <Route path="/orders/new" element={<NewOrderPage />} />
-  //           <Route path="/orders" element={<PastOrdersPage />} />
-  //         </Routes>
-  //       </>
-  //     ) : (
-  //       <AuthPage setUser={setUser} />
-  //     )}
-  //   </main>
-  // );
 
   return (
     <main className="App">
@@ -45,9 +20,10 @@ export default function App() {
           <NavBar user={user} setUser={setUser} />
           <Routes>
             {user.isAdmin && <Route path="/admin" element={<EditMenuPage />} />}
+            {user.isAdmin && <Route path="/*" element={<Navigate to="/admin" />} />}
             <Route path="/orders/new" element={<NewOrderPage />} />
             <Route path="/orders" element={<PastOrdersPage />} />
-            <Route path="/*" element={<Navigate to="/admin" />} />
+            <Route path="/*" element={<Navigate to="/orders/new" />} />
           </Routes>
         </>
       ) : (
