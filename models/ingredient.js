@@ -8,6 +8,7 @@ const ingredientSchema = new Schema(
             type: String,
             required: true
         },
+        emoji: String,
         price: {
             type: Number,
             required: true,
