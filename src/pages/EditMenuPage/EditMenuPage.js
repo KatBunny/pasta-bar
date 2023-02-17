@@ -1,6 +1,7 @@
 //for admin user to add/remove/update menu items
 import IngredientList from '../../components/IngredientList/IngredientList'
 import AddIngredientForm from '../../components/AddIngredientForm/AddIngredientForm'
+import * as ingredientAPI from '../../utilities/ingredients-api'
 
 export default function EditMenuPage(){
     return(
