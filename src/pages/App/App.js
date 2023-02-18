@@ -14,6 +14,7 @@ export default function App() {
   const [allIngredients, setAllIngredients] = useState([])
   const [availableIngredients, setAvailableIngredients] = useState([])
   const [newOrder, setNewOrder] = useState([])
+  const [showOrders, setShowOrders] = useState([])
 
   useEffect(function() {
     async function getAllIngredients() {
@@ -51,7 +52,14 @@ export default function App() {
                 setUser={setUser}
               />
             } />
-            <Route path="/orders" element={<PastOrdersPage user={user} setUser={setUser}/>} />
+            <Route path="/orders" element={
+              <PastOrdersPage 
+                user={user}
+                setUser={setUser}
+                showOrders={showOrders}
+                setShowOrders={setShowOrders}
+              />
+            } />
             <Route path="/*" element={<Navigate to="/orders/new" />} />
 
           </Routes>
