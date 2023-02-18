@@ -12,6 +12,7 @@ export default function NewOrderBuilder({newOrder, setNewOrder}) {
                 ingredients={newOrder}
                 setNewOrder={setNewOrder} //this is for removing an item
             />
+            <button>Place order</button>
         
         </>
     )
