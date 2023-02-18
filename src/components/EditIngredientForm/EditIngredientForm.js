@@ -1,15 +1,38 @@
 // Form to update ingredient
 export default function EditIngredientForm(){
+    
+
     return (
-        <form>
+        <form autoComplete="off" /*onSubmit={}*/>
             <label>Ingredient Name</label>
-            <input placeholder="Name" />
+            <input
+                type="text"
+                name="name"
+                placeholder="Name" 
+            />
             <label>Ingredient Image</label>
-            <input placeholder="Image" />
+            <input 
+                type="text"
+                name="emoji"
+                placeholder="Image" 
+            />
             <label>Ingredient Price</label>
-            <input placeholder="Price" />
-            <button>Update Ingredient</button>
-            <button>Delete Ingredient</button>
+            <input 
+                type="number"
+                name="price"
+                placeholder="Price" 
+            />
+            <label>Available</label>
+            <input 
+                type="checkbox" 
+                name="available"
+            />
+            <button type="submit">
+                Update Ingredient
+            </button>
+            <button type="submit">
+                Delete Ingredient
+            </button>
         </form>
     )
 }
