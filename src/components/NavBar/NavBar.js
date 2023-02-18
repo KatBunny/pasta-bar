@@ -15,7 +15,7 @@ export default function NavBar({user, setUser}) {
             &nbsp;
             <Link to="/orders/new">New Order</Link>
             &nbsp;
-            {user.isAdmin && <Link to="/admin">Edit Menu &nbsp;</Link> } 
+            {user.isAdmin && <Link to="/edit-menu">Edit Menu &nbsp;</Link> } 
             {/* <span>Welcome, {user.name}!</span>
             &nbsp;  &nbsp; */}
             <Link to="" onClick={handleLogOut}>Log Out</Link>
