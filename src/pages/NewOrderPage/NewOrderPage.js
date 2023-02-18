@@ -8,8 +8,8 @@ import * as ordersAPI from "../../utilities/orders-api";
 //can filter it in App
 export default function NewOrderPage({allIngredients, user, setUser }) {
     const navigate = useNavigate()    
-    console.log("<<<<NewOrderPage>>>>")
-    console.log(allIngredients)
+    // console.log("<<<<NewOrderPage>>>>")
+    // console.log(allIngredients)
 
     //const availableIngredients = allIngredients
     //allIngredients.filter(ingredient => ingredient.isAvailable)
@@ -21,7 +21,7 @@ export default function NewOrderPage({allIngredients, user, setUser }) {
     // handle function to add ingredient to order when ingredient item is clicked
     // passing to <IngredientList/>
     async function handleAddIngredientToOrder(ingredientId){
-        // [HK] need new api function to add ingredient to order
+        // [HK] think we need a new api function to add an ingredient to a order
         // const order = await ordersAPI.create(ingredientId)
         // setNewOrder(order)
     }
