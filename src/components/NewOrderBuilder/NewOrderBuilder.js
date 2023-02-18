@@ -2,7 +2,7 @@
 
 import IngredientList from "../IngredientList/IngredientList";
 
-export default function NewOrderBuilder({newOrder, setNewOrder}) {
+export default function NewOrderBuilder({newOrder, setNewOrder, placeOrder}) {
 
 
     return(
@@ -12,6 +12,7 @@ export default function NewOrderBuilder({newOrder, setNewOrder}) {
                 ingredients={newOrder}
                 setNewOrder={setNewOrder} //this is for removing an item
             />
+            <button onClick={placeOrder} disabled={!newOrder.length}>Place order</button>
         
         </>
     )
