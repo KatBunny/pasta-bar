@@ -50,12 +50,12 @@ orderSchema.statics.getOrder = function (userId) {
 }
 
 
-orderSchema.methods.addIngredientToOrder = async function (ingredientId) {
-    const order = this
-    const ingredient = await mongoose.model('Ingredient').findById(ingredientId)
-    order.ingredients.push({ ingredient })
-    return order.save()
-}
+// orderSchema.methods.addIngredientToOrder = async function (ingredientId) {
+//     const order = this
+//     const ingredient = await mongoose.model('Ingredient').findById(ingredientId)
+//     order.ingredients.push({ ingredient })
+//     return order.save()
+// }
 
 
 module.exports = mongoose.model('Order', orderSchema)

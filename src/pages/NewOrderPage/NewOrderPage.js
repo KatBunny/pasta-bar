@@ -6,14 +6,10 @@ import * as ordersAPI from "../../utilities/orders-api";
 
 //needs to be sent allIngredients or we
 //can filter it in App
-export default function NewOrderPage({availableIngredients, user, setUser }) {
+export default function NewOrderPage({availableIngredients, newOrder, setNewOrder, user, setUser }) {
     const navigate = useNavigate()    
     // console.log("<<<<NewOrderPage>>>>")
     // console.log(availableIngredients)
-    
-    // order state
-    const [newOrder, setNewOrder] = useState([])
-    // test data [{name:"Spaghetti"}]
 
     // handle function to add ingredient to order when ingredient item is clicked
     // passing to <IngredientList/>
