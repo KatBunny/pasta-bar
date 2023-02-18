@@ -7,7 +7,11 @@ export default function Ingredient({ingredient, user, addToOrder, removeFromOrde
     return(
         <>
             {/* <h4>Ingredient</h4> */}
-            <p>{ingredient.name}</p>
+            <div>
+                <span>{ingredient.name}</span>
+                &nbsp;
+                <span>${ingredient.price}</span>
+            </div>
 
             {isEditing ?           
                 <EditIngredientForm />
