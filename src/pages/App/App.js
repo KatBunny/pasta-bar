@@ -34,7 +34,7 @@ export default function App() {
       {/* terinary for conditional rendering */}
       {user ? (
         <>
-          <NavBar user={user} setUser={setUser} />
+          <NavBar user={user} setUser={setUser} order={newOrder} resetOrder={setNewOrder}/>
           <Routes>
             {/* {user.isAdmin && <Route path="/admin" element={<EditMenuPage allIngredients={allIngredients} />} />} */}
 
