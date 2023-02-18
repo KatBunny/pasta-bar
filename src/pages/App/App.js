@@ -12,13 +12,15 @@ import * as ingredientsAPI from "../../utilities/ingredients-api"
 export default function App() {
   const [user, setUser] = useState(getUser());
   const [allIngredients, setAllIngredients] = useState([])
+  const [availableIngredients, setAvailableIngredients] = useState([])
 
   useEffect(function() {
     async function getAllIngredients() {
       //console.log('useEffect runs only after first render');
       const ingredients = await ingredientsAPI.show()
-      //console.log(ingredients)
+      const listOfAvailable = ingredients.filter(ingredient => ingredient.isAvailable)
       setAllIngredients(ingredients)
+      setAvailableIngredients(listOfAvailable)
     }
     getAllIngredients()
   }, []
@@ -39,7 +41,7 @@ export default function App() {
 
             {user.isAdmin && <Route path="/*" element={<Navigate to="/edit-menu" />} />}
 
-            <Route path="/orders/new" element={<NewOrderPage allIngredients={allIngredients} user={user} setUser={setUser}/>} />
+            <Route path="/orders/new" element={<NewOrderPage availableIngredients={availableIngredients} user={user} setUser={setUser}/>} />
             <Route path="/orders" element={<PastOrdersPage user={user} setUser={setUser}/>} />
             <Route path="/*" element={<Navigate to="/orders/new" />} />
 
