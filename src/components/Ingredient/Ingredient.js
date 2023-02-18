@@ -7,7 +7,8 @@ export default function Ingredient({ingredient, user}){
         <>
             {/* <h4>Ingredient</h4> */}
             <p>{ingredient.name}</p>
-            {/* {user.isAdmin && <EditIngredientForm />} */}
+            {(user && user.isAdmin) && <EditIngredientForm />}
+            
         </>
     )
 }
