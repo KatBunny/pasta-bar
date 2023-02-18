@@ -8,7 +8,7 @@ export default function Ingredient({ingredient, user, addToOrder}){
             {/* <h4>Ingredient</h4> */}
             <p>{ingredient.name}</p>
             <button onClick={() => addToOrder(ingredient._id)}>➕</button>
-            {/* {user.isAdmin && <EditIngredientForm />} */}
+            {(user && user.isAdmin) && <EditIngredientForm />}
         </>
     )
 }
