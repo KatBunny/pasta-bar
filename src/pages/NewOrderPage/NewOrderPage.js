@@ -6,13 +6,10 @@ import * as ordersAPI from "../../utilities/orders-api";
 
 //needs to be sent allIngredients or we
 //can filter it in App
-export default function NewOrderPage({allIngredients, user, setUser }) {
+export default function NewOrderPage({availableIngredients, user, setUser }) {
     const navigate = useNavigate()    
     // console.log("<<<<NewOrderPage>>>>")
-    // console.log(allIngredients)
-
-    //const availableIngredients = allIngredients
-    //allIngredients.filter(ingredient => ingredient.isAvailable)
+    // console.log(availableIngredients)
     
     // order state
     const [newOrder, setNewOrder] = useState([])
@@ -20,15 +17,27 @@ export default function NewOrderPage({allIngredients, user, setUser }) {
 
     // handle function to add ingredient to order when ingredient item is clicked
     // passing to <IngredientList/>
-    async function handleAddIngredientToOrder(ingredientId){
+    function handleAddIngredientToOrder(ingredient){
         // [HK] think we need a new api function to add an ingredient to a order
         // const order = await ordersAPI.create(ingredientId)
         // setNewOrder(order)
+        setNewOrder([...newOrder, ingredient])
+    }
+    function handleRemoveIngredientFromOrder(ingredientId) {
+        const reducedOrder = newOrder.filter(ingredient => ingredient._id !== ingredientId)
+        setNewOrder(reducedOrder)
     }
 
+
     // handle function to create finalized order
-    async function handlePlaceOrder(){
-        await ordersAPI.create()
+    async function handlePlaceOrder(ingredientList){
+        
+        const finalizedOrder = {
+            user: user,
+            ingredients: ingredientList
+        }
+        
+        await ordersAPI.create(finalizedOrder)
         navigate('/orders')
     }
 
@@ -36,13 +45,12 @@ export default function NewOrderPage({allIngredients, user, setUser }) {
         <>
             <h2>New Order Page</h2>
             <IngredientList 
-                ingredients={allIngredients} //change back to availableIngredients
-                setNewOrder={setNewOrder}
+                ingredients={availableIngredients} //change back to availableIngredients
                 addToOrder={handleAddIngredientToOrder}
             />
             <NewOrderBuilder
                 newOrder={newOrder}
-                setNewOrder={setNewOrder}
+                removeFromOrder={handleRemoveIngredientFromOrder}
                 placeOrder={handlePlaceOrder}
             />
         </>

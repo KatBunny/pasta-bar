@@ -9,7 +9,7 @@ export default function EditMenuPage({ user, allIngredients }){
     return(
         <>
             <h1>Edit Menu Page</h1>
-            <IngredientList user={user} ingredients={allIngredients} />
+            <IngredientList user={user} ingredients={allIngredients} isEditing={true} />
             <AddIngredientForm />
         </>
     )
