@@ -15,7 +15,7 @@ export default function Ingredient({ingredient, user, addToOrder, removeFromOrde
                 isInNewOrder ?
                     <button onClick={() => removeFromOrder(ingredient._id)}>--</button>
                     :
-                    <button onClick={() => addToOrder(ingredient)}>➕</button>
+                    <button onClick={() => addToOrder(ingredient._id)}>➕</button>
             }
         </>
     )

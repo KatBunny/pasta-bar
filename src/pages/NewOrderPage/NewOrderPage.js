@@ -17,11 +17,26 @@ export default function NewOrderPage({availableIngredients, user, setUser }) {
 
     // handle function to add ingredient to order when ingredient item is clicked
     // passing to <IngredientList/>
-    function handleAddIngredientToOrder(ingredient){
+    function handleAddIngredientToOrder(ingredientId){
         // [HK] think we need a new api function to add an ingredient to a order
         // const order = await ordersAPI.create(ingredientId)
         // setNewOrder(order)
-        setNewOrder([...newOrder, ingredient])
+    
+        //console.log(ingredientId)
+
+        const alreadyExists = newOrder.filter(ingredient => ingredient._id === ingredientId)
+        
+        //Check if ingredient is already in newOrder
+        //const testerIngredient = {_id: ingredientId}
+
+        if(alreadyExists.length === 0)  {
+            //actually add the ingredient
+            const ingredient = availableIngredients.find(ingredient => ingredient._id === ingredientId)
+            setNewOrder([...newOrder, ingredient])
+        } else {
+            console.log("You already have this in your order!")
+        }
+        console.log(newOrder)
     }
     function handleRemoveIngredientFromOrder(ingredientId) {
         const reducedOrder = newOrder.filter(ingredient => ingredient._id !== ingredientId)
@@ -31,7 +46,7 @@ export default function NewOrderPage({availableIngredients, user, setUser }) {
 
     // handle function to create finalized order
     async function handlePlaceOrder(ingredientList){
-        
+
         const finalizedOrder = {
             user: user,
             ingredients: ingredientList
