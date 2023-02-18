@@ -18,6 +18,8 @@ export default function NewOrderBuilder({newOrder, removeFromOrder, placeOrder, 
                 isInNewOrder={true}
                 removeFromOrder={removeFromOrder}
             />
+            {/* need to add order total here */}
+            <p>Total cost: $</p>
             <button onClick={handleSubmit} disabled={!newOrder.length}>Place order</button>
         
         </>

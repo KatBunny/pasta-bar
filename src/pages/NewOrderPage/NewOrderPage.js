@@ -59,6 +59,7 @@ export default function NewOrderPage({availableIngredients, newOrder, setNewOrde
                 ingredients={availableIngredients} //change back to availableIngredients
                 addToOrder={handleAddIngredientToOrder}
             />
+            <hr />
             <NewOrderBuilder
                 newOrder={newOrder}
                 removeFromOrder={handleRemoveIngredientFromOrder}

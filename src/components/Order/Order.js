@@ -7,7 +7,7 @@ export default function Order({order}){
         <>
 
             <p>Order: {order._id}</p>
-            <p>Total Price: {order.orderTotal}</p>
+            <p>Total Price: ${order.orderTotal}</p>
             <p>Ingredients:</p>
             {ingredientItems}
         </>
