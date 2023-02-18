@@ -13,7 +13,7 @@ export default function Ingredient({ingredient, user, addToOrder, removeFromOrde
                 <EditIngredientForm />
                 :
                 isInNewOrder ?
-                    <button onClick={() => removeFromOrder(ingredient._id)}>--</button>
+                    <button onClick={() => removeFromOrder(ingredient._id)}>➖</button>
                     :
                     <button onClick={() => addToOrder(ingredient._id)}>➕</button>
             }
