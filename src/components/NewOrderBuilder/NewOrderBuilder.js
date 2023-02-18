@@ -9,7 +9,7 @@ export default function NewOrderBuilder({newOrder, setNewOrder}) {
         <>
             <h3>Your Order</h3>
             <IngredientList 
-                newOrder={newOrder}
+                ingredients={newOrder}
                 setNewOrder={setNewOrder} //this is for removing an item
             />
         

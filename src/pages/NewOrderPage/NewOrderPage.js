@@ -5,20 +5,26 @@ import NewOrderBuilder from "../../components/NewOrderBuilder/NewOrderBuilder";
 //needs to be sent allIngredients or we
 //can filter it in App
 export default function NewOrderPage({allIngredients}) {
-    const availableIngredients = allIngredients
+    
+    console.log("<<<<NewOrderPage>>>>")
+    console.log(allIngredients)
+
+    //const availableIngredients = allIngredients
     //allIngredients.filter(ingredient => ingredient.isAvailable)
-    const [newOrder, setNewOrder] = useState([])
+    const [newOrder, setNewOrder] = useState([{name:"Spaghetti"}])
    
+
+
 
     return (
         <>
             <h2>New Order Page</h2>
             <IngredientList 
-                ingredients={availableIngredients}
+                ingredients={allIngredients} //change back to availableIngredients
                 setNewOrder={setNewOrder}
             />
             <NewOrderBuilder
-                newOrder={{newOrder}}
+                newOrder={newOrder}
                 setNewOrder={setNewOrder}
             />
         </>
