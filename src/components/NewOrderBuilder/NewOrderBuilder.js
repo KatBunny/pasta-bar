@@ -2,11 +2,12 @@
 
 import IngredientList from "../IngredientList/IngredientList";
 
-export default function NewOrderBuilder({newOrder, removeFromOrder, placeOrder}) {
+export default function NewOrderBuilder({newOrder, removeFromOrder, placeOrder, resetOrder}) {
 
     function handleSubmit(event) {
         //event.preventDefault()
         placeOrder(newOrder)
+        resetOrder([])
     }
 
     return(

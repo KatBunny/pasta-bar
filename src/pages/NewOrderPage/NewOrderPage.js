@@ -63,6 +63,7 @@ export default function NewOrderPage({availableIngredients, newOrder, setNewOrde
                 newOrder={newOrder}
                 removeFromOrder={handleRemoveIngredientFromOrder}
                 placeOrder={handlePlaceOrder}
+                resetOrder={setNewOrder}
             />
         </>
     )
