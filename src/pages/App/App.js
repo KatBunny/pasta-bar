@@ -40,7 +40,13 @@ export default function App() {
           <Routes>
             {/* {user.isAdmin && <Route path="/admin" element={<EditMenuPage allIngredients={allIngredients} />} />} */}
 
-            {user.isAdmin && <Route path="/edit-menu" element={<EditMenuPage user={user} allIngredients={allIngredients} />} />}
+            {user.isAdmin && <Route path="/edit-menu" element={
+              <EditMenuPage
+                user={user}
+                allIngredients={allIngredients}
+                setAllIngredients={setAllIngredients}
+              />} />
+            }
 
             {user.isAdmin && <Route path="/*" element={<Navigate to="/edit-menu" />} />}
 

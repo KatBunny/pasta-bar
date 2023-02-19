@@ -2,7 +2,15 @@
 
 import Ingredient from "../Ingredient/Ingredient"
 
-export default function IngredientList({ingredients, addToOrder, removeFromOrder, isInNewOrder, user, isEditing}){
+export default function IngredientList({
+    ingredients, 
+    setAllIngredients,
+    addToOrder, 
+    removeFromOrder, 
+    isInNewOrder, 
+    user, 
+    isEditing,
+}){
 
     let ingredientsList = null
 
@@ -15,6 +23,8 @@ export default function IngredientList({ingredients, addToOrder, removeFromOrder
             isEditing={isEditing}
             key={index}
             user={user}
+            ingredients={ingredients}
+            setAllIngredients={setAllIngredients}
         />)
     }
     

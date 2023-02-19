@@ -1,14 +1,16 @@
 import { useState } from "react"
 import * as ingredientsAPI from "../../utilities/ingredients-api"
 
-export default function AddIngredientForm(){
+export default function AddIngredientForm({allIngredients, setAllIngredients}){
     
-    const [newIngredient, setNewIngredient] = useState({
+    const intialData = {
         name: "New Ingredient",
         // emoji: "",
         price: 0.00,
         isAvailable: true
-    })
+    }
+
+    const [newIngredient, setNewIngredient] = useState(intialData)
 
     function handleChange(event) {
         setNewIngredient({
@@ -26,10 +28,16 @@ export default function AddIngredientForm(){
 
     async function handleCreateIngredient(event) {
         event.preventDefault()
-        console.log(newIngredient)
-        await ingredientsAPI.create(newIngredient)
+        //console.log(newIngredient)
+
+        
+        //Add to the DB
+        const createdIngredient = await ingredientsAPI.create(newIngredient)
         
         //RE-RENDER THE LIST
+        setAllIngredients([...allIngredients, createdIngredient])
+        //reset form data
+        setNewIngredient(intialData)
     }
 
 

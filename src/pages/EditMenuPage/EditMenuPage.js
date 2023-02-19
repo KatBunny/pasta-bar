@@ -5,16 +5,19 @@
 
 import IngredientList from '../../components/IngredientList/IngredientList'
 import AddIngredientForm from '../../components/AddIngredientForm/AddIngredientForm'
-import * as ingredientAPI from '../../utilities/ingredients-api'
 
-export default function EditMenuPage({ user, allIngredients }){
-    // console.log("<<<<EditMenuPage>>>>")
-    // console.log(allIngredients)
+export default function EditMenuPage({ user, allIngredients, setAllIngredients}){
     return(
         <>
             <h1>Edit Menu Page</h1>
-            <IngredientList user={user} ingredients={allIngredients} isEditing={true} />
-            <AddIngredientForm />
+            <IngredientList
+                user={user}
+                ingredients={allIngredients}
+                setAllIngredients={setAllIngredients}
+                isEditing={true}
+            />
+            <AddIngredientForm allIngredients={allIngredients} setAllIngredients={setAllIngredients}
+            />
         </>
     )
 }

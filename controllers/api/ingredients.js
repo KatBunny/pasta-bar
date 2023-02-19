@@ -54,9 +54,10 @@ async function update(req, res, next) {
         console.log(blendedData)
 
         ingredient.updateOne(blendedData)
-
+        ingredient.save()
+        
         res.sendStatus(204)
-        return ingredient.save()
+        // return ingredient.save()
 
     } catch (error) {
         console.error(error)
