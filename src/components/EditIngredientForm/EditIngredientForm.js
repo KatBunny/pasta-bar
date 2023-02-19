@@ -43,6 +43,8 @@ export default function EditIngredientForm({ingredient, ingredients, setAllIngre
         //Update the DB
         const updatedIngredient = await ingredientsAPI.update(ingredient._id, editedIngredient)
 
+        console.log(updatedIngredient)
+
         //RE-RENDER THE LIST
         setAllIngredients([...ingredients, updatedIngredient])
 
