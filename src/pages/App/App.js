@@ -15,6 +15,7 @@ export default function App() {
   const [availableIngredients, setAvailableIngredients] = useState([])
   const [newOrder, setNewOrder] = useState([])
   const [showOrders, setShowOrders] = useState([])
+  const [orderTotal, setOrderTotal] = useState(0)
 
   useEffect(function() {
     async function getAllIngredients() {
@@ -50,6 +51,8 @@ export default function App() {
                 setNewOrder={setNewOrder}
                 user={user}
                 setUser={setUser}
+                orderTotal={orderTotal}
+                setOrderTotal={setOrderTotal}
               />
             } />
             <Route path="/orders" element={

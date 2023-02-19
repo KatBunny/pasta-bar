@@ -2,10 +2,7 @@
 
 import Ingredient from "../Ingredient/Ingredient"
 
-
 export default function IngredientList({ingredients, addToOrder, removeFromOrder, isInNewOrder, user, isEditing}){
-    // console.log("<<<<IngredientList>>>>")
-    // console.log(ingredients)
 
     let ingredientsList = null
 
@@ -19,9 +16,7 @@ export default function IngredientList({ingredients, addToOrder, removeFromOrder
             key={index}
             user={user}
         />)
-        // console.log(ingredientsList)
     }
-    //console.log(ingredientsList)
     
     return (
         <div>

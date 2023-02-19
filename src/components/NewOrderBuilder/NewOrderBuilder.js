@@ -2,7 +2,7 @@
 
 import IngredientList from "../IngredientList/IngredientList";
 
-export default function NewOrderBuilder({newOrder, removeFromOrder, placeOrder, resetOrder}) {
+export default function NewOrderBuilder({newOrder, removeFromOrder, placeOrder, resetOrder, orderTotal}) {
 
     function handleSubmit(event) {
         //event.preventDefault()
@@ -18,8 +18,7 @@ export default function NewOrderBuilder({newOrder, removeFromOrder, placeOrder, 
                 isInNewOrder={true}
                 removeFromOrder={removeFromOrder}
             />
-            {/* need to add order total here */}
-            <p>Total cost: $</p>
+            <p>Total cost: ${orderTotal}</p>
             <button onClick={handleSubmit} disabled={!newOrder.length}>Place order</button>
         
         </>
