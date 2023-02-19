@@ -14,7 +14,7 @@ export default function Ingredient({ingredient, user, addToOrder, removeFromOrde
             </div>
 
             {isEditing ?           
-                <EditIngredientForm />
+                <EditIngredientForm ingredient={ingredient} />
                 :
                 isInNewOrder ?
                     <button onClick={() => removeFromOrder(ingredient._id)}>➖</button>
