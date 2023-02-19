@@ -7,7 +7,6 @@ export default function Ingredient({
     removeFromOrder, 
     isInNewOrder, 
     isEditing,
-    handleUpdateIngredient,
     ingredients,
     setAllIngredients
 }){
@@ -25,7 +24,6 @@ export default function Ingredient({
                     ingredient={ingredient}
                     ingredients={ingredients}
                     setAllIngredients={setAllIngredients}
-                    handleUpdateIngredient={handleUpdateIngredient}
                 />
                 :
                 isInNewOrder ?

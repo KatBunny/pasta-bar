@@ -29,21 +29,6 @@ export default function App() {
   }, []
   );
 
-  //should this be a useEffect()?
-  //update allIngredients and availableIngredients
-  //Called from Add & Edit Ingredient Forms
-  function handleUpdateIngredient() {
-    
-    //Don't we just need the same functionality as
-    // getAllIngredients() above?
-    
-    //setAllIngredients([...allIngredients, ])
-      
-    //setAvailableIngredients([...availableIngredients, ])
-      
-  }
-
-
 
   return (
     <main className="App">
@@ -60,7 +45,6 @@ export default function App() {
                 user={user}
                 allIngredients={allIngredients}
                 setAllIngredients={setAllIngredients}
-                handleUpdateIngredient={handleUpdateIngredient}
               />} />
             }
 

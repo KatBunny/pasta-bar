@@ -2,7 +2,7 @@
 import IngredientList from '../../components/IngredientList/IngredientList'
 import AddIngredientForm from '../../components/AddIngredientForm/AddIngredientForm'
 
-export default function EditMenuPage({ user, allIngredients, setAllIngredients, handleUpdateIngredient }){
+export default function EditMenuPage({ user, allIngredients, setAllIngredients}){
     return(
         <>
             <h1>Edit Menu Page</h1>
@@ -10,9 +10,10 @@ export default function EditMenuPage({ user, allIngredients, setAllIngredients, 
                 user={user}
                 ingredients={allIngredients}
                 setAllIngredients={setAllIngredients}
-                isEditing={true} 
-                handleUpdateIngredient={handleUpdateIngredient}/>
-            <AddIngredientForm allIngredients={allIngredients} setAllIngredients={setAllIngredients} handleUpdateIngredient={handleUpdateIngredient}/>
+                isEditing={true}
+            />
+            <AddIngredientForm allIngredients={allIngredients} setAllIngredients={setAllIngredients}
+            />
         </>
     )
 }

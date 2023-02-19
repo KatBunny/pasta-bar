@@ -10,7 +10,6 @@ export default function IngredientList({
     isInNewOrder, 
     user, 
     isEditing,
-    handleUpdateIngredient
 }){
 
     let ingredientsList = null
@@ -26,7 +25,6 @@ export default function IngredientList({
             user={user}
             ingredients={ingredients}
             setAllIngredients={setAllIngredients}
-            handleUpdateIngredient={handleUpdateIngredient}
         />)
     }
     
