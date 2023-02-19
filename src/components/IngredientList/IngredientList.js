@@ -2,8 +2,8 @@
 
 import Ingredient from "../Ingredient/Ingredient"
 
-
 export default function IngredientList({ingredients, addToOrder, removeFromOrder, isInNewOrder, user, isEditing}){
+
     let ingredientsList = null
 
     if(ingredients && ingredients.length > 0) {
@@ -16,9 +16,7 @@ export default function IngredientList({ingredients, addToOrder, removeFromOrder
             key={index}
             user={user}
         />)
-        // console.log(ingredientsList)
     }
-    //console.log(ingredientsList)
     
     return (
         <div>
