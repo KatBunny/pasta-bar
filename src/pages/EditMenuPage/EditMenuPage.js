@@ -1,7 +1,7 @@
 //for admin user to add/remove/update menu items
-const root = ReactDOM.createRoot(
-  document.getElementById('root')
-);
+// const root = ReactDOM.createRoot(
+//   document.getElementById('root')
+// );
 
 import IngredientList from '../../components/IngredientList/IngredientList'
 import AddIngredientForm from '../../components/AddIngredientForm/AddIngredientForm'
