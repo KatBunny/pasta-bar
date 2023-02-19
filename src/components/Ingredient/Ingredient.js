@@ -1,4 +1,5 @@
 // Specific ingredient item
+import { useState } from 'react'
 import EditIngredientForm from '../EditIngredientForm/EditIngredientForm'
 export default function Ingredient({
     ingredient, 
@@ -11,6 +12,8 @@ export default function Ingredient({
     setAllIngredients
 }){
 
+    const [thisIngredient, setThisIngredient] = useState(ingredient)
+
     return(
         <>
             <div>
@@ -21,7 +24,8 @@ export default function Ingredient({
 
             {isEditing ?           
                 <EditIngredientForm
-                    ingredient={ingredient}
+                    ingredient={thisIngredient}
+                    setThisIngredient={setThisIngredient}
                     ingredients={ingredients}
                     setAllIngredients={setAllIngredients}
                 />
