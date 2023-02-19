@@ -29,6 +29,21 @@ export default function App() {
   }, []
   );
 
+  //should this be a useEffect()?
+  //update allIngredients and availableIngredients
+  //Called from Add & Edit Ingredient Forms
+  function handleUpdateIngredient() {
+    
+    //Don't we just need the same functionality as
+    // getAllIngredients() above?
+    
+    //setAllIngredients([...allIngredients, ])
+      
+    //setAvailableIngredients([...availableIngredients, ])
+      
+  }
+
+
 
   return (
     <main className="App">
@@ -40,7 +55,14 @@ export default function App() {
           <Routes>
             {/* {user.isAdmin && <Route path="/admin" element={<EditMenuPage allIngredients={allIngredients} />} />} */}
 
-            {user.isAdmin && <Route path="/edit-menu" element={<EditMenuPage user={user} allIngredients={allIngredients} />} />}
+            {user.isAdmin && <Route path="/edit-menu" element={
+              <EditMenuPage
+                user={user}
+                allIngredients={allIngredients}
+                setAllIngredients={setAllIngredients}
+                handleUpdateIngredient={handleUpdateIngredient}
+              />} />
+            }
 
             {user.isAdmin && <Route path="/*" element={<Navigate to="/edit-menu" />} />}
 

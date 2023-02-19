@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom"
 import IngredientList from "../../components/IngredientList/IngredientList";
 import NewOrderBuilder from "../../components/NewOrderBuilder/NewOrderBuilder";
@@ -42,7 +42,19 @@ export default function NewOrderPage({ availableIngredients, newOrder, setNewOrd
         navigate('/orders')
     }
 
+
+
+
     // order total
+
+    //should we move this function to app.js and pass the results down to here? 
+
+    //seeing this warning in react server (npm start)
+
+    //WARNING in [eslint] 
+    // src/pages/NewOrderPage/NewOrderPage.js
+    // Line 67:8:  React Hook useEffect has a missing dependency: 'setOrderTotal'. Either include it or remove the dependency array. If 'setOrderTotal' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
     useEffect(function(){
         async function getOrderTotal(){
             let updatedTotal = 0
@@ -53,6 +65,11 @@ export default function NewOrderPage({ availableIngredients, newOrder, setNewOrd
         }
         getOrderTotal()
     }, [newOrder])
+
+
+
+
+
 
     return (
         <>

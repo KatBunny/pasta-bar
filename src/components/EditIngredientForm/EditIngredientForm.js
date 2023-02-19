@@ -2,7 +2,7 @@
 import { useState } from "react"
 import * as ingredientsAPI from "../../utilities/ingredients-api"
 
-export default function EditIngredientForm({ingredient}){ 
+export default function EditIngredientForm({ingredient, ingredients, setAllIngredients, handleUpdateIngredient}){ 
     
     const [editedIngredient, setEditedIngredient] = useState({
         name: ingredient.name,
@@ -26,9 +26,15 @@ export default function EditIngredientForm({ingredient}){
     async function handleDelete(event) {
         event.preventDefault()
         console.log("Removed")
-        await ingredientsAPI.remove(ingredient._id)
-        
+
+        const ingredientId = ingredient._id
+
         //RE-RENDER THE LIST
+        setAllIngredients(ingredients.filter(ingredient => ingredient._id !== ingredientId))
+
+        //Remove from DB
+        await ingredientsAPI.remove(ingredientId)
+
     }
 
     async function handleUpdate(event) {
@@ -36,6 +42,7 @@ export default function EditIngredientForm({ingredient}){
         await ingredientsAPI.update(ingredient._id, editedIngredient)
         
         //RE-RENDER THE LIST
+        //handleUpdateIngredient()
     }
 
     
