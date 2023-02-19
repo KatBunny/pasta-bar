@@ -42,12 +42,18 @@ async function remove(req, res, next) {
 //update
 async function update(req, res, next) {
     try {
+        //ingredient from db (by ID)
         const ingredient = await Ingredients.findById(req.params.id)
-       
         console.log(ingredient)
-        console.log(req.body.ingredient)
-        
-        ingredient.updateOne(req.body.ingredient)
+
+        //new ingredient data
+        const newIngredient = req.body
+        console.log(newIngredient)
+
+        const blendedData = Object.assign(ingredient, newIngredient)
+        console.log(blendedData)
+
+        ingredient.updateOne(blendedData)
 
         res.sendStatus(204)
         return ingredient.save()

@@ -14,9 +14,9 @@ export async function create(ingredientData) {
 }
 
 export async function remove(ingredientId) {
-    return sendRequest(BASE_URL + "/:id", "DELETE", ingredientId)
+    return sendRequest(`${BASE_URL}/${ingredientId}`, "DELETE")
 }
 
-export async function update(ingredientData) {
-    return sendRequest(BASE_URL + "/:id", "PATCH", ingredientData)
+export async function update(ingredientId, ingredientData) {
+    return sendRequest(`${BASE_URL}/${ingredientId}`, "PATCH", ingredientData)
 }

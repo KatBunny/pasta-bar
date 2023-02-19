@@ -4,9 +4,6 @@ import Ingredient from "../Ingredient/Ingredient"
 
 
 export default function IngredientList({ingredients, addToOrder, removeFromOrder, isInNewOrder, user, isEditing}){
-    // console.log("<<<<IngredientList>>>>")
-    // console.log(ingredients)
-
     let ingredientsList = null
 
     if(ingredients && ingredients.length > 0) {
