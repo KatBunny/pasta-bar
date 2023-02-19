@@ -4,8 +4,8 @@ import AddIngredientForm from '../../components/AddIngredientForm/AddIngredientF
 import * as ingredientAPI from '../../utilities/ingredients-api'
 
 export default function EditMenuPage({ user, allIngredients }){
-    console.log("<<<<EditMenuPage>>>>")
-    console.log(allIngredients)
+    // console.log("<<<<EditMenuPage>>>>")
+    // console.log(allIngredients)
     return(
         <>
             <h1>Edit Menu Page</h1>
