@@ -2,7 +2,7 @@
 import { useState } from "react"
 import * as ingredientsAPI from "../../utilities/ingredients-api"
 
-export default function EditIngredientForm({ingredient, setThisIngredient, ingredients, setAllIngredients}){ 
+export default function EditIngredientForm({ingredient, getAllAndAvailable}){ 
     
     const [editedIngredient, setEditedIngredient] = useState({
         _id: ingredient._id,
@@ -26,35 +26,28 @@ export default function EditIngredientForm({ingredient, setThisIngredient, ingre
     }
     async function handleDelete(event) {
         event.preventDefault()
-        //console.log("Removed")
+        console.log("handleDelete")
 
         const ingredientId = ingredient._id
-
-        //RE-RENDER THE LIST
-        setAllIngredients(ingredients.filter(ingredient => ingredient._id !== ingredientId))
 
         //Remove from DB
         await ingredientsAPI.remove(ingredientId)
 
+        //this is not showing
+        console.log("after delete")
+
+        //RE-RENDER THE LIST
+        getAllAndAvailable()
     }
 
     async function handleUpdate(event) {
         event.preventDefault()
 
-        console.log(ingredients)
-   
-  
         //Update the DB
         const updatedIngredient = await ingredientsAPI.update(ingredient._id, editedIngredient)
 
-        console.log(updatedIngredient)
-   
-
         //RE-RENDER THE LIST
-        //setThisIngredient(editedIngredient)
-        //
-        //Why doesn't this work??? 
-        setAllIngredients([...ingredients, editedIngredient])
+        getAllAndAvailable()
     }
 
     

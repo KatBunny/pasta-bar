@@ -8,11 +8,8 @@ export default function Ingredient({
     removeFromOrder, 
     isInNewOrder, 
     isEditing,
-    ingredients,
-    setAllIngredients
+    getAllAndAvailable
 }){
-
-    const [thisIngredient, setThisIngredient] = useState(ingredient)
 
     return(
         <>
@@ -24,10 +21,8 @@ export default function Ingredient({
 
             {isEditing ?           
                 <EditIngredientForm
-                    ingredient={thisIngredient}
-                    setThisIngredient={setThisIngredient}
-                    ingredients={ingredients}
-                    setAllIngredients={setAllIngredients}
+                    ingredient={ingredient}
+                    getAllAndAvailable={getAllAndAvailable}
                 />
                 :
                 isInNewOrder ?
