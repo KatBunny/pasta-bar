@@ -16,12 +16,12 @@ code {
 /* CSS Custom Properties */
 /* :root {
   --white: #FFFFFF;
-  --tan-1: #FBF9F6;
-  --tan-2: #E7E2DD;
-  --tan-3: #E2D9D1;
-  --tan-4: #D3C1AE;
-  --orange: #F67F00;
-  --text-light: #968c84;
+  --yellow: #F7D08A;
+  --green: #E3F09B;
+  --blue: #87B6A7;
+  --ebony: #5B5941;
+  --red: #DC3E0F;
+  --text-light: #D0D0D0;
   --text-dark: #615954;
 }
 
@@ -31,12 +31,10 @@ code {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-  sans-serif;
+  font-family: 'Gloock', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--tan-4);
+  background-color: var(--white);
   padding: 2vmin;
   height: 100vh;
 }
@@ -84,9 +82,9 @@ code {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: var(--tan-1);
+  background-color: var(--yellow);
   color: var(--text-dark);
-  border: .1vmin solid var(--tan-3);
+  border: .1vmin solid var(--ebony);
   border-radius: 1vmin;
   padding: .6vmin;
   text-align: center;
@@ -95,13 +93,17 @@ code {
 
 .form-container {
   padding: 3vmin;
-  background-color: var(--tan-1);
-  border: .1vmin solid var(--tan-3);
+  background-color: var(--white);
+  border: .1vmin solid var(--ebony);
   border-radius: 1vmin;
 }
 
+p {
+  font-family: 'Inter', sans-serif;
+}
+
 p.error-message {
-  color: var(--orange);
+  color: var(--red);
   text-align: center;
 } */
 
@@ -109,8 +111,8 @@ p.error-message {
   display: grid;
   grid-template-columns: 1fr 3fr;
   gap: 1.25vmin;
-  color: var(--text-light);
-} */
+  color: var(--text-dark);
+}
 
 label {
   font-size: 2vmin;
@@ -121,7 +123,7 @@ label {
 input {
   padding: 1vmin;
   font-size: 2vmin;
-  border: .1vmin solid var(--tan-3);
+  border: .1vmin solid var(--text-light);
   border-radius: .5vmin;
   color: var(--text-dark);
   background-image: none !important; 
@@ -129,19 +131,19 @@ input {
 }
 
 input:focus {
-  border-color: var(--orange);
+  border-color: var(--yellow);
 }
 
 button, a.button {
   margin: 1vmin;
   padding: 1vmin;
-  color: var(--white);
-  background-color: var(--orange);
+  color: var(--text-dark);
+  background-color: var(--yellow);
   font-size: 2vmin;
   font-weight: bold;
   text-decoration: none;
   text-align: center;
-  border: .1vmin solid var(--tan-2);
+  border: .1vmin solid var(--ebony);
   border-radius: .5vmin;
   outline: none;
   cursor: pointer;
@@ -159,7 +161,8 @@ button.btn-xs {
 
 button:disabled, form:invalid button[type="submit"] {
   cursor: not-allowed;
-  background-color: var(--tan-4);
+  background-color: var(--text-light);
+  color: var(--ebony)
 }
 
 button[type="submit"] {
