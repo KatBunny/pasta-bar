@@ -157,3 +157,8 @@ button[type="submit"] {
   grid-column: span 2;
   margin: 1vmin 0 0;
 }
+
+a.links:hover {
+  text-decoration: underline var(--yellow);
+  text-decoration-thickness: 3px;
+}
