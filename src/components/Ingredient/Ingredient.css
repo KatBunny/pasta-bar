@@ -1,0 +1,10 @@
+.ingredient-container{
+    border: 1px solid white;
+    margin: 5px;
+    display: flex;
+
+}
+.i-name{
+    margin-left: auto;
+    display: block;
+}

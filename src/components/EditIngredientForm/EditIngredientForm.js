@@ -29,7 +29,7 @@ export default function EditIngredientForm({ingredient, getAllAndAvailable}){
         console.log("handleDelete")
 
         const ingredientId = ingredient._id
-
+        
         //Remove from DB
         await ingredientsAPI.remove(ingredientId)
 
@@ -53,8 +53,8 @@ export default function EditIngredientForm({ingredient, getAllAndAvailable}){
     
 
     return (
-        <form autoComplete="off">
-            <label>Ingredient Name</label>
+        <form className="edit-form" autoComplete="off">
+            <label className="edit-labels">Ingredient Name</label>
             <input
                 type="text"
                 name="name"
