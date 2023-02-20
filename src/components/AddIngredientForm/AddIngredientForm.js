@@ -1,7 +1,7 @@
 import { useState } from "react"
 import * as ingredientsAPI from "../../utilities/ingredients-api"
 
-export default function AddIngredientForm({allIngredients, setAllIngredients}){
+export default function AddIngredientForm({allIngredients, setAllIngredients, getAllAndAvailable}){
     
     const intialData = {
         name: "New Ingredient",
@@ -35,7 +35,9 @@ export default function AddIngredientForm({allIngredients, setAllIngredients}){
         const createdIngredient = await ingredientsAPI.create(newIngredient)
         
         //RE-RENDER THE LIST
-        setAllIngredients([...allIngredients, createdIngredient])
+        //setAllIngredients([...allIngredients, createdIngredient])
+        getAllAndAvailable()
+
         //reset form data
         setNewIngredient(intialData)
     }
