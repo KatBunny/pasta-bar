@@ -17,15 +17,18 @@ export default function App() {
   const [showOrders, setShowOrders] = useState([])
   const [orderTotal, setOrderTotal] = useState(0)
 
+
+  async function getAllAndAvailable() {
+    //console.log('useEffect runs only after first render');
+    const ingredients = await ingredientsAPI.show()
+    const listOfAvailable = ingredients.filter(ingredient => ingredient.isAvailable)
+    setAllIngredients(ingredients)
+    setAvailableIngredients(listOfAvailable)
+    console.log("Set Ingredients for State")
+  }
+
   useEffect(function() {
-    async function getAllIngredients() {
-      //console.log('useEffect runs only after first render');
-      const ingredients = await ingredientsAPI.show()
-      const listOfAvailable = ingredients.filter(ingredient => ingredient.isAvailable)
-      setAllIngredients(ingredients)
-      setAvailableIngredients(listOfAvailable)
-    }
-    getAllIngredients()
+    getAllAndAvailable()
   }, []
   );
 
@@ -38,13 +41,11 @@ export default function App() {
         <>
           <NavBar user={user} setUser={setUser} order={newOrder} resetOrder={setNewOrder}/>
           <Routes>
-            {/* {user.isAdmin && <Route path="/admin" element={<EditMenuPage allIngredients={allIngredients} />} />} */}
-
             {user.isAdmin && <Route path="/edit-menu" element={
               <EditMenuPage
                 user={user}
                 allIngredients={allIngredients}
-                setAllIngredients={setAllIngredients}
+                getAllAndAvailable={getAllAndAvailable}
               />} />
             }
 

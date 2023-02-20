@@ -6,8 +6,7 @@ export default function Order({order}){
     return(
         <div className="order-container">
             <div className="order-container-header">
-                <p>Order: {order._id}</p>
-                <p>Date: {order.createdDate}</p>
+                <p>Ordered on: {order.createdDate}</p>
                 <p>Total Cost: ${order.orderTotal}</p>
             </div>
             <div className="order-container-body">
