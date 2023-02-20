@@ -14,9 +14,8 @@ export default function Ingredient({
     return(
         <>
             <div>
-                <span>{ingredient.name}</span>
-                &nbsp;
-                <span>${ingredient.price}</span>
+                <h4>{ingredient.name}</h4>
+                <p>${ingredient.price}</p>
             </div>
 
             {isEditing ?           
