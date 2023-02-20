@@ -6,12 +6,12 @@ export default function Order({order}){
     return(
         <div className="order-container">
             <div className="order-container-header">
-                <p>Order: {order._id}</p>
-                <p>Date: {order.createdDate}</p>
-                <p>Total Cost: ${order.orderTotal}</p>
+                <h3>Order: {order._id}</h3>
+                <h3>Date: {order.createdDate}</h3>
+                <h3>Total Cost: ${order.orderTotal}</h3>
             </div>
             <div className="order-container-body">
-                <p>Ingredients:</p>
+                <h3>Ingredients:</h3>
                 <div className="order-ingredients-container">
                     {ingredientItems}
                 </div>
