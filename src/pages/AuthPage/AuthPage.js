@@ -9,6 +9,10 @@ export default function AuthPage({ setUser }) {
     
     return (
         <>
+            <div className="welcome-page">
+                <h1>iPasta</h1>
+                <p>make your pasta dreams come true</p>
+            </div>
             {showSignUp ? (
                 <SignUpForm setUser={setUser} />
             ) : (
@@ -17,7 +21,7 @@ export default function AuthPage({ setUser }) {
 
                 {showSignUp ? 
                     <>
-                        <p>Already have an account? <a className="authpage-link" onClick={()=> setShowSignUp(!showSignUp)}>Login here</a></p>
+                        <p>Already have an account? Login <a className="authpage-link" onClick={()=> setShowSignUp(!showSignUp)}>here</a></p>
                     </>
                 : 
                 <>

@@ -10,7 +10,11 @@ a.authpage-link {
     color: var(--blue);
 }
 
+a.authpage-link {
+    cursor: pointer;
+}
+
 a.authpage-link:hover {
-    text-decoration: underline var(--red);
+    text-decoration: underline var(--yellow);
     text-decoration-thickness: 3px;
 }

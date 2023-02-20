@@ -118,7 +118,7 @@ input {
 }
 
 input:focus {
-  border-color: var(--yellow);
+  border: .4vmin solid var(--yellow);
 }
 
 button, a.button {
