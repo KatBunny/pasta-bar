@@ -14,7 +14,7 @@ export default function PastOrdersPage({ showOrders, setShowOrders }){
 
     return(
         <div className="past-orders-main-container">
-            <h1>Your Order History</h1>
+            <h1>Your Orders History</h1>
             <PastOrdersList myOrders={showOrders}/>
         </div>
     )
