@@ -5,8 +5,8 @@ const Ingredients = require('./models/ingredient')
 
 
 ;(async function () {
-    await Ingredient.deleteMany({})
-	const ingredients = await Ingredient.create([
+    await Ingredients.deleteMany({})
+	const ingredients = await Ingredients.create([
         {name: 'Chicken', price:'$9.99', emoji:'🍗', isAvailable:true},
         {name:'Seafood',price:'$12.99', emoji:'🐟', isAvailable:true},
         {name:'Meatball',price:'$8.99', emoji:'🧆', isAvailable:true},
