@@ -34,6 +34,12 @@ orderSchema.virtual('orderId').get(function () {
 	return this.id.slice(-6).toUpperCase()
 })
 
+// Order's created date
+orderSchema.virtual('createdDate').get(function () {
+        return this.createdAt.toLocaleDateString();
+
+})
+
 // * (!!Delete) We don't have cart as we are not implementing payments function so instead of cart I replaced to order
 // Static methods are callable on the Model (Order)
 orderSchema.statics.getOrder = function (userId) {
