@@ -1,6 +1,4 @@
 //-----Backend Ingredients Controllers-----//
-
-
 const Ingredients = require("../../models/ingredient")
 
 //show all
@@ -33,8 +31,11 @@ async function remove(req, res, next) {
     try {
         console.log("in the remove ingredient function")
         const ingredient = await Ingredients.findById(req.params.id)
-        ingredient.deleteOne()
+        await ingredient.deleteOne()
         res.sendStatus(204)
+
+        //we think the problem may be with this res.sendStatus
+
     } catch (error) {
         console.error(error)
         res.status(400).json(error)
@@ -58,8 +59,6 @@ async function update(req, res, next) {
         ingredient.save()
         
         res.json(ingredient)
-        //res.sendStatus(204)
-        // return ingredient.save()
 
     } catch (error) {
         console.error(error)

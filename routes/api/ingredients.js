@@ -14,8 +14,6 @@ const ensureIsAdmin = require('../../config/ensureIsAdmin');
 //Show Ingredients
 router.get("/", ingredientsCtrl.show)
 
-
-////////ensureIsAdmin
 //Create New Ingredient 
 router.post("/new", ensureIsAdmin, ingredientsCtrl.create)
 
@@ -24,5 +22,6 @@ router.delete("/:id", ensureIsAdmin, ingredientsCtrl.remove)
 
 //Update Ingredient
 router.patch("/:id", ensureIsAdmin, ingredientsCtrl.update)
+
 
 module.exports = router
