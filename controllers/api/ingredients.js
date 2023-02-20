@@ -21,7 +21,7 @@ async function show(req, res, next) {
 async function create(req, res, next) {
     try {
         const ingredient = await Ingredients.create(req.body)
-        res.json(ingredient)
+        res.status(201).json(ingredient)
     } catch (error) {
         console.error(error)
         res.status(400).json(error)
@@ -31,6 +31,7 @@ async function create(req, res, next) {
 //delete
 async function remove(req, res, next) {
     try {
+        console.log("in the remove ingredient function")
         const ingredient = await Ingredients.findById(req.params.id)
         ingredient.deleteOne()
         res.sendStatus(204)
@@ -56,7 +57,8 @@ async function update(req, res, next) {
         ingredient.updateOne(blendedData)
         ingredient.save()
         
-        res.sendStatus(204)
+        res.json(ingredient)
+        //res.sendStatus(204)
         // return ingredient.save()
 
     } catch (error) {
