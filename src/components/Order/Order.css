@@ -1,3 +1,8 @@
+
+.past-orders-main-container {
+    font-family: 'Gloock', serif;
+    color: #5B5941;
+}
 .past-orders-container {
     margin-left: auto;
     margin-right: auto;
@@ -7,12 +12,15 @@
     width: 80%;
     border: whitesmoke 1px solid;
     border-radius: 5px;
-    margin: 1rem auto 1rem auto ;
+    margin: 1rem auto 1rem auto;
+    background-color: #87B6A7;
 }
 
 .order-container-header{
     display: flex;
     justify-content: space-evenly;
+    background-color: #F7D08A;
+    opacity: 0.8;
 }
 
 
