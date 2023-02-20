@@ -28,7 +28,7 @@ export default function IngredientList({
     }
     
     return (
-        <div>
+        <div className="ingredient-list-container main-sub">
             {ingredientsList && ingredientsList}
         </div>
     )

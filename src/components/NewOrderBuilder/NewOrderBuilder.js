@@ -11,7 +11,7 @@ export default function NewOrderBuilder({newOrder, removeFromOrder, placeOrder, 
     }
 
     return(
-        <>
+        <div className="new-order-builder-container main-sub">
             <h3>Your Order</h3>
             <IngredientList 
                 ingredients={newOrder}
@@ -21,7 +21,7 @@ export default function NewOrderBuilder({newOrder, removeFromOrder, placeOrder, 
             <p>Total cost: ${orderTotal.toFixed(2)}</p>
             <button onClick={handleSubmit} disabled={!newOrder.length}>Place order</button>
         
-        </>
+        </div>
     )
 }
 
