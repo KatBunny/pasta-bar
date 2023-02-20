@@ -18,3 +18,13 @@ a.authpage-link:hover {
     text-decoration: underline var(--yellow);
     text-decoration-thickness: 3px;
 }
+
+div.welcome-page > h1 {
+    margin-bottom: 0;
+    color: var(--red);
+}
+
+div.welcome-page > p {
+    margin-top: 5px;
+    color: var(--blue);
+}
