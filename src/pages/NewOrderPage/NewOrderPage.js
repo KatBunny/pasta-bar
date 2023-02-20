@@ -23,7 +23,7 @@ export default function NewOrderPage({ availableIngredients, newOrder, setNewOrd
             alert("You already have this in your order!")
         }
     }
-    console.log(newOrder)
+    //console.log(newOrder)
 
     // remove ingredient from order
     function handleRemoveIngredientFromOrder(ingredientId) {
