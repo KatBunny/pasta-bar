@@ -2,9 +2,8 @@ import { useState, useEffect } from "react"
 import PastOrdersList from "../../components/PastOrdersList/PastOrdersList"
 import * as ordersAPI from "../../utilities/orders-api"
 
-export default function PastOrdersPage(){
-    const [showOrders, setShowOrders] = useState([])
-
+export default function PastOrdersPage({ showOrders, setShowOrders }){
+    
     useEffect(function(){
         async function getOrders(){
             const orders = await ordersAPI.show()

@@ -13,6 +13,9 @@ export default function App() {
   const [user, setUser] = useState(getUser());
   const [allIngredients, setAllIngredients] = useState([])
   const [availableIngredients, setAvailableIngredients] = useState([])
+  const [newOrder, setNewOrder] = useState([])
+  const [showOrders, setShowOrders] = useState([])
+  const [orderTotal, setOrderTotal] = useState(0)
 
   useEffect(function() {
     async function getAllIngredients() {
@@ -33,16 +36,39 @@ export default function App() {
       {/* terinary for conditional rendering */}
       {user ? (
         <>
-          <NavBar user={user} setUser={setUser} />
+          <NavBar user={user} setUser={setUser} order={newOrder} resetOrder={setNewOrder}/>
           <Routes>
             {/* {user.isAdmin && <Route path="/admin" element={<EditMenuPage allIngredients={allIngredients} />} />} */}
 
-            {user.isAdmin && <Route path="/edit-menu" element={<EditMenuPage user={user} allIngredients={allIngredients} />} />}
+            {user.isAdmin && <Route path="/edit-menu" element={
+              <EditMenuPage
+                user={user}
+                allIngredients={allIngredients}
+                setAllIngredients={setAllIngredients}
+              />} />
+            }
 
             {user.isAdmin && <Route path="/*" element={<Navigate to="/edit-menu" />} />}
 
-            <Route path="/orders/new" element={<NewOrderPage availableIngredients={availableIngredients} user={user} setUser={setUser}/>} />
-            <Route path="/orders" element={<PastOrdersPage user={user} setUser={setUser}/>} />
+            <Route path="/orders/new" element={
+              <NewOrderPage
+                availableIngredients={availableIngredients}
+                newOrder={newOrder}
+                setNewOrder={setNewOrder}
+                user={user}
+                setUser={setUser}
+                orderTotal={orderTotal}
+                setOrderTotal={setOrderTotal}
+              />
+            } />
+            <Route path="/orders" element={
+              <PastOrdersPage 
+                user={user}
+                setUser={setUser}
+                showOrders={showOrders}
+                setShowOrders={setShowOrders}
+              />
+            } />
             <Route path="/*" element={<Navigate to="/orders/new" />} />
 
           </Routes>

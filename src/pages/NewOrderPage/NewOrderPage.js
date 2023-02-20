@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom"
 import IngredientList from "../../components/IngredientList/IngredientList";
 import NewOrderBuilder from "../../components/NewOrderBuilder/NewOrderBuilder";
@@ -6,47 +6,33 @@ import * as ordersAPI from "../../utilities/orders-api";
 
 //needs to be sent allIngredients or we
 //can filter it in App
-export default function NewOrderPage({availableIngredients, user, setUser }) {
-    const navigate = useNavigate()    
-    // console.log("<<<<NewOrderPage>>>>")
-    // console.log(availableIngredients)
-    
-    // order state
-    const [newOrder, setNewOrder] = useState([])
-    // test data [{name:"Spaghetti"}]
+export default function NewOrderPage({ availableIngredients, newOrder, setNewOrder, user, setUser, orderTotal, setOrderTotal }) {
+    const navigate = useNavigate()
 
-    // handle function to add ingredient to order when ingredient item is clicked
-    // passing to <IngredientList/>
+    // add ingredient to order when ingredient item is clicked
     function handleAddIngredientToOrder(ingredientId){
-        // [HK] think we need a new api function to add an ingredient to a order
-        // const order = await ordersAPI.create(ingredientId)
-        // setNewOrder(order)
-    
-        //console.log(ingredientId)
-
         const alreadyExists = newOrder.filter(ingredient => ingredient._id === ingredientId)
         
         //Check if ingredient is already in newOrder
         //const testerIngredient = {_id: ingredientId}
-
         if(alreadyExists.length === 0)  {
             //actually add the ingredient
             const ingredient = availableIngredients.find(ingredient => ingredient._id === ingredientId)
             setNewOrder([...newOrder, ingredient])
         } else {
-            console.log("You already have this in your order!")
+            alert("You already have this in your order!")
         }
-        console.log(newOrder)
     }
+    console.log(newOrder)
+
+    // remove ingredient from order
     function handleRemoveIngredientFromOrder(ingredientId) {
         const reducedOrder = newOrder.filter(ingredient => ingredient._id !== ingredientId)
         setNewOrder(reducedOrder)
     }
 
-
-    // handle function to create finalized order
+    // create finalized order
     async function handlePlaceOrder(ingredientList){
-
         const finalizedOrder = {
             user: user,
             ingredients: ingredientList
@@ -56,6 +42,35 @@ export default function NewOrderPage({availableIngredients, user, setUser }) {
         navigate('/orders')
     }
 
+
+
+
+    // order total
+
+    //should we move this function to app.js and pass the results down to here? 
+
+    //seeing this warning in react server (npm start)
+
+    //WARNING in [eslint] 
+    // src/pages/NewOrderPage/NewOrderPage.js
+    // Line 67:8:  React Hook useEffect has a missing dependency: 'setOrderTotal'. Either include it or remove the dependency array. If 'setOrderTotal' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+    useEffect(function(){
+        async function getOrderTotal(){
+            let updatedTotal = 0
+            newOrder.forEach((ingredient) => {
+                updatedTotal += ingredient.price
+            })
+            setOrderTotal(updatedTotal)
+        }
+        getOrderTotal()
+    }, [newOrder])
+
+
+
+
+
+
     return (
         <>
             <h2>New Order Page</h2>
@@ -63,10 +78,13 @@ export default function NewOrderPage({availableIngredients, user, setUser }) {
                 ingredients={availableIngredients} //change back to availableIngredients
                 addToOrder={handleAddIngredientToOrder}
             />
+            <hr />
             <NewOrderBuilder
                 newOrder={newOrder}
                 removeFromOrder={handleRemoveIngredientFromOrder}
                 placeOrder={handlePlaceOrder}
+                resetOrder={setNewOrder}
+                orderTotal={orderTotal}
             />
         </>
     )

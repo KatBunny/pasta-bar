@@ -1,19 +1,37 @@
 // Specific ingredient item
-import { isEditable } from '@testing-library/user-event/dist/utils'
+import { useState } from 'react'
 import EditIngredientForm from '../EditIngredientForm/EditIngredientForm'
-export default function Ingredient({ingredient, user, addToOrder, removeFromOrder, isInNewOrder, isEditing}){
-    // console.log("<<<<Ingredient>>>>")
-    // console.log(ingredient)
+export default function Ingredient({
+    ingredient, 
+    user, 
+    addToOrder, 
+    removeFromOrder, 
+    isInNewOrder, 
+    isEditing,
+    ingredients,
+    setAllIngredients
+}){
+
+    const [thisIngredient, setThisIngredient] = useState(ingredient)
+
     return(
         <>
-            {/* <h4>Ingredient</h4> */}
-            <p>{ingredient.name}</p>
+            <div>
+                <span>{ingredient.name}</span>
+                &nbsp;
+                <span>${ingredient.price}</span>
+            </div>
 
             {isEditing ?           
-                <EditIngredientForm />
+                <EditIngredientForm
+                    ingredient={thisIngredient}
+                    setThisIngredient={setThisIngredient}
+                    ingredients={ingredients}
+                    setAllIngredients={setAllIngredients}
+                />
                 :
                 isInNewOrder ?
-                    <button onClick={() => removeFromOrder(ingredient._id)}>--</button>
+                    <button onClick={() => removeFromOrder(ingredient._id)}>➖</button>
                     :
                     <button onClick={() => addToOrder(ingredient._id)}>➕</button>
             }
