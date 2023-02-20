@@ -8,8 +8,8 @@ export default function PastOrdersList({ user, setUser, myOrders }){
     const myOrderItems = myOrders.map((myOrder, index) => (<Order order={myOrder} key={index}/>))
 
     return(
-        <>
+        <div className="past-orders-container">
             {myOrderItems}
-        </>
+        </div>
     )
 }

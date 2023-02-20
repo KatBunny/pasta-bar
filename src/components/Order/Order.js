@@ -1,12 +1,21 @@
 // Show orders on PastOrdersPage
+import "./Order.css"
 
 export default function Order({order}){
-    const ingredientItems = order.ingredients.map((ingredient, index) => (<p key={index}>{ingredient.name}</p>))
+    const ingredientItems = order.ingredients.map((ingredient, index) => (<p className="ingredients" key={index}>{ingredient.name}</p>))
     return(
-        <>
-            <p>Order: {order._id}</p>
-            <p>Ingredients:</p>
-            {ingredientItems}
-        </>
+        <div className="order-container">
+            <div className="order-container-header">
+                <p>Order: {order._id}</p>
+                <p>Date: {order.createdDate}</p>
+                <p>Total Cost: ${order.orderTotal}</p>
+            </div>
+            <div className="order-container-body">
+                <p>Ingredients:</p>
+                <div className="order-ingredients-container">
+                    {ingredientItems}
+                </div>
+            </div>
+        </div>
     )
 }

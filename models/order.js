@@ -27,7 +27,8 @@ orderSchema.virtual('orderTotal').get(function () {
 
 // Total items quantity on the order
 orderSchema.virtual('totalQty').get(function () {
-	return this.ingredients.reduce((total, item) => total + item, 0)
+	// return this.ingredients.reduce((total, item) => total + item, 0)
+    return this.ingredients.length
 })
 
 orderSchema.virtual('orderId').get(function () {
