@@ -5,6 +5,7 @@
 
 import IngredientList from '../../components/IngredientList/IngredientList'
 import AddIngredientForm from '../../components/AddIngredientForm/AddIngredientForm'
+import './EditMenuPage.css'
 
 export default function EditMenuPage({ user, allIngredients, setAllIngredients}){
     return(

@@ -1,6 +1,7 @@
 // index all ingredients
 
 import Ingredient from "../Ingredient/Ingredient"
+import "./IngredientList.css"
 
 export default function IngredientList({
     ingredients, 
@@ -29,7 +30,7 @@ export default function IngredientList({
     }
     
     return (
-        <div>
+        <div className="ingredient-list-container">
             {ingredientsList && ingredientsList}
         </div>
     )
