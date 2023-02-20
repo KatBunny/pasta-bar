@@ -1,0 +1,16 @@
+.auth-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a.authpage-link {
+    font-weight: bold;
+    color: var(--blue);
+}
+
+a.authpage-link:hover {
+    text-decoration: underline var(--red);
+    text-decoration-thickness: 3px;
+}
