@@ -4,13 +4,15 @@ import * as ingredientsAPI from "../../utilities/ingredients-api"
 
 export default function EditIngredientForm({ingredient, getAllAndAvailable}){ 
     
-    const [editedIngredient, setEditedIngredient] = useState({
+    const initialData = {
         _id: ingredient._id,
         name: ingredient.name,
         // emoji: ingredient.emoji,
         price: ingredient.price,
         isAvailable: ingredient.isAvailable
-    })
+    }
+
+    const [editedIngredient, setEditedIngredient] = useState(initialData)
 
     function handleChange(event) {
         setEditedIngredient({
@@ -30,14 +32,21 @@ export default function EditIngredientForm({ingredient, getAllAndAvailable}){
 
         const ingredientId = ingredient._id
 
+
         //Remove from DB
+        //iffy?
+       
         await ingredientsAPI.remove(ingredientId)
+        //this is breaking us out of this function
+        
+
 
         //this is not showing
         console.log("after delete")
 
         //RE-RENDER THE LIST
         getAllAndAvailable()
+        setEditedIngredient(initialData)
     }
 
     async function handleUpdate(event) {

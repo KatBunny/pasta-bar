@@ -2,11 +2,13 @@ require('dotenv').config()
 require('.config/database')
 
 const Ingredients = require('./models/ingredient')
+const Orders = require("./models/order")
 
 
 ;(async function () {
-    await Ingredient.deleteMany({})
-	const ingredients = await Ingredient.create([
+    await Orders.deleteMany({})
+    await Ingredients.deleteMany({})
+	const ingredients = await Ingredients.create([
         {name: 'Chicken', price:'$9.99', emoji:'🍗', isAvailable:true},
         {name:'Seafood',price:'$12.99', emoji:'🐟', isAvailable:true},
         {name:'Meatball',price:'$8.99', emoji:'🧆', isAvailable:true},
