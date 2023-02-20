@@ -28,14 +28,11 @@ export default function AddIngredientForm({allIngredients, setAllIngredients, ge
 
     async function handleCreateIngredient(event) {
         event.preventDefault()
-        //console.log(newIngredient)
 
-        
         //Add to the DB
         const createdIngredient = await ingredientsAPI.create(newIngredient)
-        
+
         //RE-RENDER THE LIST
-        //setAllIngredients([...allIngredients, createdIngredient])
         getAllAndAvailable()
 
         //reset form data
