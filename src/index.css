@@ -161,4 +161,5 @@ button[type="submit"] {
 a.links:hover {
   text-decoration: underline var(--yellow);
   text-decoration-thickness: 3px;
+  color: var(--blue);
 }
