@@ -1,6 +1,7 @@
 // index all ingredients
 
 import Ingredient from "../Ingredient/Ingredient"
+import "./IngredientList.css"
 
 export default function IngredientList({
     ingredients, 
@@ -16,6 +17,7 @@ export default function IngredientList({
 
     if(ingredients && ingredients.length > 0) {
         ingredientsList = ingredients.map((ingredient, index) => <Ingredient 
+            
             ingredient={ingredient} 
             addToOrder={addToOrder}
             removeFromOrder={removeFromOrder}

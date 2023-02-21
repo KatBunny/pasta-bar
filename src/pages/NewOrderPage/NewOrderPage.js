@@ -76,13 +76,13 @@ export default function NewOrderPage({ availableIngredients, newOrder, setNewOrd
         <div className="new-orders-container">
             <h2>New Order Page</h2>
             <div className="main-components-container">
-                <div className="available-ingredients-containe main-sub">
+                <div className="available-ingredients-container main-sub">
                     <h3>Available Ingredients</h3>
-
+                    <div className="jig">
                     <IngredientList 
                         ingredients={availableIngredients} //change back to availableIngredients
                         addToOrder={handleAddIngredientToOrder}
-                    />
+                    /></div>
                 </div>
 
                 <NewOrderBuilder

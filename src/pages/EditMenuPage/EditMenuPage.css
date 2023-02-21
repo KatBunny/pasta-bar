@@ -1,0 +1,23 @@
+.welcome{
+    display: flex;
+    margin: 0 auto 5vh;
+    width: fit-content;
+}
+.edit-list-container{
+    border: 2px solid var(--ebony);
+    border-radius: 10px;
+    padding: 5vh;
+    max-width: 65vw;
+    margin: auto;
+    overflow-y:auto;
+    height: 55vh;
+    scrollbar-color: red blue;
+}
+.edit-list-container::-webkit-scrollbar{
+    background-color: var(--green);
+    border-radius: 5px;
+}
+.edit-list-container::-webkit-scrollbar-thumb{
+    background: var(--blue);
+    border-radius: 5px;
+}
