@@ -1,6 +1,7 @@
 // Specific ingredient item
 import { useState } from 'react'
 import EditIngredientForm from '../EditIngredientForm/EditIngredientForm'
+import "./Ingredient.css"
 export default function Ingredient({
     ingredient, 
     user, 
@@ -12,11 +13,12 @@ export default function Ingredient({
 }){
 
     return(
-        <>
-            <div>
-                <h4>{ingredient.name}</h4>
-                <p>${ingredient.price}</p>
-            </div>
+        
+            <div className='ingredient-container ingredient-card'>
+                <div className='inline'>
+                <h3 className='h3'>{ingredient.name}</h3>
+                <p className='price'>$ {ingredient.price}</p>
+                </div>
 
             {isEditing ?           
                 <EditIngredientForm
@@ -29,6 +31,6 @@ export default function Ingredient({
                     :
                     <button onClick={() => addToOrder(ingredient._id)}>➕</button>
             }
-        </>
+        </div>
     )
 }

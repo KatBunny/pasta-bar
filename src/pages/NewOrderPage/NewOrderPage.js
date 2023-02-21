@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom"
 import IngredientList from "../../components/IngredientList/IngredientList";
 import NewOrderBuilder from "../../components/NewOrderBuilder/NewOrderBuilder";
 import * as ordersAPI from "../../utilities/orders-api";
+import "./NewOrderPage.css"
 
 //needs to be sent allIngredients or we
 //can filter it in App
@@ -72,21 +73,27 @@ export default function NewOrderPage({ availableIngredients, newOrder, setNewOrd
 
 
     return (
-        <>
+        <div className="new-orders-container">
             <h2>New Order Page</h2>
-            <IngredientList 
-                ingredients={availableIngredients} //change back to availableIngredients
-                addToOrder={handleAddIngredientToOrder}
-            />
-            <hr />
-            <NewOrderBuilder
-                newOrder={newOrder}
-                removeFromOrder={handleRemoveIngredientFromOrder}
-                placeOrder={handlePlaceOrder}
-                resetOrder={setNewOrder}
-                orderTotal={orderTotal}
-            />
-        </>
+            <div className="main-components-container">
+                <div className="available-ingredients-container main-sub">
+                    <h3>Available Ingredients</h3>
+                    <div className="jig">
+                    <IngredientList 
+                        ingredients={availableIngredients} //change back to availableIngredients
+                        addToOrder={handleAddIngredientToOrder}
+                    /></div>
+                </div>
+
+                <NewOrderBuilder
+                    newOrder={newOrder}
+                    removeFromOrder={handleRemoveIngredientFromOrder}
+                    placeOrder={handlePlaceOrder}
+                    resetOrder={setNewOrder}
+                    orderTotal={orderTotal}
+                />
+            </div>
+        </div>
     )
 
 }

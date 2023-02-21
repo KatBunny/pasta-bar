@@ -3,19 +3,24 @@
 
 import IngredientList from '../../components/IngredientList/IngredientList'
 import AddIngredientForm from '../../components/AddIngredientForm/AddIngredientForm'
+import './EditMenuPage.css'
 
 export default function EditMenuPage({ user, allIngredients, getAllAndAvailable}){
     return(
         <>
-            <h1>Edit Menu Page</h1>
+            <h1 className='welcome'>Welcome Back, {user.name.toUpperCase()}</h1>
+            <AddIngredientForm getAllAndAvailable={getAllAndAvailable}
+            />
+            <div className="edit-list-container">
             <IngredientList
+                className="edit-menu-ingredient-list"
                 user={user}
                 ingredients={allIngredients}
                 getAllAndAvailable={getAllAndAvailable}
                 isEditing={true}
             />
-            <AddIngredientForm getAllAndAvailable={getAllAndAvailable}
-            />
+            </div>
+            
         </>
     )
 }

@@ -1,0 +1,23 @@
+.main-components-container{
+    display: flex;
+}
+
+.main-components-container .main-sub{
+    flex:1;
+    border: var(--ebony) 2px solid;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+.ingredient-list-container{
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-right: 5px;
+    margin-left: 5px;  
+
+
+
+}
+
+.new-order-builder-container{
+
+}

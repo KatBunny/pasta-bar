@@ -1,0 +1,43 @@
+.edit-list-container .ingredient-container {
+    width: 50vw;
+    margin: auto;
+    border: 1px solid var(--ebony);
+    border-radius: 5px;
+    background-color: var(--green);
+    margin-bottom: 4vh;
+     box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px; 
+   
+}
+.edit-list-container .inline{
+    flex-direction: row;
+    color: var(--ebony);
+    display:flex;
+}
+.edit-list-container .edit-form{
+    background-color: var(--white);
+    padding: 2vh;
+    color: var(--ebony);
+}
+.edit-list-container .h3{
+    margin: 2vh auto 2vh 10vw;
+}
+.edit-list-container .price{
+    margin: 2vh 10vw 2vh auto;
+}
+
+
+.jig .ingredient-card{
+    display: inline-block;
+    width: 120px;
+    min-width: none;
+    height: 170px;
+    border: #5B5941 2px solid;
+    border-radius: 5px;
+    vertical-align: top;
+    margin: 10px 5px 10px 5px;
+    color: #5B5941;
+    background-color: #E3F09B;
+    opacity: 0.7;
+
+
+}
