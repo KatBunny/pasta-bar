@@ -64,6 +64,7 @@ export default function EditIngredientForm({ingredient, getAllAndAvailable}){
 
     return (
         <form className="edit-form" autoComplete="off">
+            <div className="inputss">
             <label className="edit-labels">Name</label>
             <input
                 type="text"
@@ -95,12 +96,15 @@ export default function EditIngredientForm({ingredient, getAllAndAvailable}){
                 checked={editedIngredient.isAvailable}
                 onChange={handleCheck}
             />
+            </div>
+            <div className="btnss">
             <button className="btn-edit" type="submit" onClick={handleUpdate}>
                 Update Ingredient
             </button>
             <button className="btn-edit" onClick={handleDelete}>
                 Delete Ingredient
             </button>
+            </div>
         </form>
     )
 }

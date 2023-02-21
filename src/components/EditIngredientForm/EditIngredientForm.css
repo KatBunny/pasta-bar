@@ -1,6 +1,6 @@
 .edit-form{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 .edit-form label{
     margin: auto;
@@ -14,4 +14,15 @@
     max-width: 20vw;
     margin: auto;
     border: 2px solid var(--ebony);
+}
+.btnss{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3vh;
+    margin-right: 5vw;
+    margin-top: 1.5vh;
+}
+.inputss{
+    margin-right: auto;
+    margin-left: 5vw;
 }

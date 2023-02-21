@@ -1,27 +1,27 @@
-.ingredient-container{
+.edit-list-container .jig .ingredient-container {
     width: 50vw;
     margin: auto;
     border: 1px solid var(--ebony);
     border-radius: 5px;
     background-color: var(--green);
     margin-bottom: 4vh;
-    /* box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px; */
-    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+     box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px; 
+   
 }
-.inline{
+.edit-list-container .inline{
     flex-direction: row;
     color: var(--ebony);
     display:flex;
 }
-.edit-form{
+.edit-list-container .edit-form{
     background-color: var(--blue);
     padding: 2vh;
     color: var(--ebony);
 }
-.h3{
+.edit-list-container .h3{
     margin: 2vh auto 2vh 10vw;
 }
-.price{
+.edit-list-container .price{
     margin: 2vh 10vw 2vh auto;
 }
 
