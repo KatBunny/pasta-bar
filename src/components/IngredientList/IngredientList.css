@@ -1,9 +1,12 @@
-.ingredient-list-container{
+.edit-menu-ingredient-list .ingredient-list-container{
     border: 1px solid white;
     border-radius: 5px;
-    width: 40vw;
+    width: 60vw;
     margin: auto;
 }
-.ingredients{
-    border: 1px solid white;
+.edit-menu-ingredient-list .edit-ingredients{
+    border: 1px solid var(--ebony);
+}
+.edit-menu-ingredient-list .edit-list-container{
+    border: 5px solid var(--ebony)
 }

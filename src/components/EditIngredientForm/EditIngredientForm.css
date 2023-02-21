@@ -1,2 +1,17 @@
-
-
+.edit-form{
+    display: flex;
+    flex-direction: column;
+}
+.edit-form label{
+    margin: auto;
+}
+.edit-form input{
+    max-width: 20vw;
+    margin: auto;
+    
+}
+.btn-edit{
+    max-width: 20vw;
+    margin: auto;
+    border: 2px solid var(--ebony);
+}

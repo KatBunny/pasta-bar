@@ -17,7 +17,6 @@ export default function IngredientList({
 
     if(ingredients && ingredients.length > 0) {
         ingredientsList = ingredients.map((ingredient, index) => <Ingredient 
-            className="ingredients"
             ingredient={ingredient} 
             addToOrder={addToOrder}
             removeFromOrder={removeFromOrder}
@@ -30,7 +29,7 @@ export default function IngredientList({
     }
     
     return (
-        <div className="ingredient-list-container">
+        <div>
             {ingredientsList && ingredientsList}
         </div>
     )

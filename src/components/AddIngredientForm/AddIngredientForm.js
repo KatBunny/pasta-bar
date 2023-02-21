@@ -1,5 +1,6 @@
 import { useState } from "react"
 import * as ingredientsAPI from "../../utilities/ingredients-api"
+import './AddIngredientForm.css'
 
 export default function AddIngredientForm({allIngredients, setAllIngredients, getAllAndAvailable}){
     
@@ -41,8 +42,9 @@ export default function AddIngredientForm({allIngredients, setAllIngredients, ge
 
 
     return (
-        <form autoComplete="off">
-            <label>Ingredient Name</label>
+        <form className="add-form" autoComplete="off">
+            <h3></h3>
+            <label>Name</label>
             <input 
                 type="text"
                 name="name"
@@ -56,7 +58,7 @@ export default function AddIngredientForm({allIngredients, setAllIngredients, ge
                 name="emoji"
                 placeholder="Emoji"
             /> */}
-            <label>Ingredient Price</label>
+            <label>Price</label>
             <input 
                 type="number"
                 name="price"
@@ -71,7 +73,7 @@ export default function AddIngredientForm({allIngredients, setAllIngredients, ge
                 checked={newIngredient.isAvailable}
                 onChange={handleCheck}
             />
-            <button type="submit" onClick={handleCreateIngredient}>
+            <button className="btn-add" type="submit" onClick={handleCreateIngredient}>
                 Add ingredient
             </button>
         </form>

@@ -13,12 +13,12 @@ export default function Ingredient({
 }){
 
     return(
-        <>
+        
             <div className='ingredient-container'>
-            <div>
-                <h4>{ingredient.name}</h4>
-                <p>${ingredient.price}</p>
-            </div>
+                <div className='inline'>
+                <h3 className='h3'>{ingredient.name}</h3>
+                <p className='price'>$ {ingredient.price}</p>
+                </div>
 
             {isEditing ?           
                 <EditIngredientForm
@@ -32,6 +32,6 @@ export default function Ingredient({
                     <button onClick={() => addToOrder(ingredient._id)}>➕</button>
             }
             </div>
-        </>
+        
     )
 }

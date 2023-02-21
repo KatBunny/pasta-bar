@@ -75,6 +75,7 @@ export default function NewOrderPage({ availableIngredients, newOrder, setNewOrd
         <>
             <h2>New Order Page</h2>
             <IngredientList 
+                className="new-order-ingredient-list"
                 ingredients={availableIngredients} //change back to availableIngredients
                 addToOrder={handleAddIngredientToOrder}
             />

@@ -1,6 +1,7 @@
 // Form to update ingredient
 import { useState } from "react"
 import * as ingredientsAPI from "../../utilities/ingredients-api"
+import "./EditIngredientForm.css"
 
 export default function EditIngredientForm({ingredient, getAllAndAvailable}){ 
     
@@ -63,7 +64,7 @@ export default function EditIngredientForm({ingredient, getAllAndAvailable}){
 
     return (
         <form className="edit-form" autoComplete="off">
-            <label className="edit-labels">Ingredient Name</label>
+            <label className="edit-labels">Name</label>
             <input
                 type="text"
                 name="name"
@@ -79,7 +80,7 @@ export default function EditIngredientForm({ingredient, getAllAndAvailable}){
                 value={editedIngredient.emoji}
                 onChange={handleChange}
             /> */}
-            <label>Ingredient Price</label>
+            <label>Price</label>
             <input 
                 type="number"
                 name="price"
@@ -94,10 +95,10 @@ export default function EditIngredientForm({ingredient, getAllAndAvailable}){
                 checked={editedIngredient.isAvailable}
                 onChange={handleCheck}
             />
-            <button type="submit" onClick={handleUpdate}>
+            <button className="btn-edit" type="submit" onClick={handleUpdate}>
                 Update Ingredient
             </button>
-            <button onClick={handleDelete}>
+            <button className="btn-edit" onClick={handleDelete}>
                 Delete Ingredient
             </button>
         </form>
