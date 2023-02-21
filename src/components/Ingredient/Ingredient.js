@@ -27,7 +27,7 @@ export default function Ingredient({
                 />
                 :
                 isInNewOrder ?
-                    <button onClick={() => removeFromOrder(ingredient._id)}>➖</button>
+                    <button className="btn-delete" onClick={() => removeFromOrder(ingredient._id)}>➖</button>
                     :
                     <button onClick={() => addToOrder(ingredient._id)}>➕</button>
             }

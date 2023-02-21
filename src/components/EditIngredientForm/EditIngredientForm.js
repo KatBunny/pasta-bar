@@ -90,7 +90,7 @@ export default function EditIngredientForm({ingredient, getAllAndAvailable}){
             <button className="btn-edit" type="submit" onClick={handleUpdate}>
                 Update Ingredient
             </button>
-            <button className="btn-edit" onClick={handleDelete}>
+            <button className="btn-delete" onClick={handleDelete}>
                 Delete Ingredient
             </button>
             </div>
