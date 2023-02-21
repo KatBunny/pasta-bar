@@ -20,7 +20,6 @@ const Orders = require("./models/order")
         {name: 'Chicken', price:'$9.99', image:'./images/icons/chicken.png', isAvailable:true},
         {name:'Seafood',price:'$12.99', image:'./images/icons/shrimp.png', isAvailable:true},
         {name:'Meatball',price:'$8.99', image:'./images/icons/meatball.png', isAvailable:true},
-        {name:'Eggplant Parmigiano',price:'$8.99', image:'./images/icons/', isAvailable:true},
         {name:'Broccoli',price:'$2.99', image:'./images/icons/broccoli.png', isAvailable:true},
         {name:'Peppers',price:'$2.99', image:'./images/icons/pepper.png', isAvailable:true},
         {name:'Spinach',price:'$2.99', image:'./images/icons/spinach.png', isAvailable:true},
@@ -41,7 +40,7 @@ const Orders = require("./models/order")
         {name:'Pesto',price:'$6.99', image:'./images/icons/pesto.png', isAvailable:true},
         {name:'Ricotta',price:'$6.99', image:'./images/icons/ricotta.png', isAvailable:true},
         {name:'Spicy Marinara',price:'$6.99', image:'./images/icons/spicymarinara.png', isAvailable:true},
-        
+
     ])
 
 
