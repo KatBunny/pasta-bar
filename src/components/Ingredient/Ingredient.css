@@ -58,6 +58,10 @@
 
 }
 
-.jog button{
-    
+.inline{
+    height: 60%;    
+}
+
+.ingredient-card h3{
+    height: 35%;
 }
