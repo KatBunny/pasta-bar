@@ -1,6 +1,7 @@
 // Specific ingredient item
 import { useState } from 'react'
 import EditIngredientForm from '../EditIngredientForm/EditIngredientForm'
+
 import "./Ingredient.css"
 export default function Ingredient({
     ingredient, 
@@ -20,11 +21,13 @@ export default function Ingredient({
                 <p className='price'>$ {ingredient.price}</p>
                 </div>
 
-            {isEditing ?           
+            {isEditing ?
+            <>
+                       
                 <EditIngredientForm
                     ingredient={ingredient}
                     getAllAndAvailable={getAllAndAvailable}
-                />
+                /></>
                 :
                 isInNewOrder ?
                     <button className="btn-delete" onClick={() => removeFromOrder(ingredient._id)}>➖</button>
