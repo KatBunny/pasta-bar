@@ -10,7 +10,11 @@ const ingredientSchema = new Schema(
         },
         image: {
             type: String,
+<<<<<<< HEAD
             default: "default.jpg"
+=======
+            default: "default-image.jpg"
+>>>>>>> main
         },
         price: {
             type: Number,
