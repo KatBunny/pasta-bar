@@ -1,3 +1,4 @@
+/* ----- Style for Edit Menu page ----- */
 .edit-list-container .ingredient-container {
     width: 50vw;
     margin: auto;
@@ -25,21 +26,18 @@
     margin: 2vh 10vw 2vh auto;
 }
 
-
-.jig .ingredient-card{
+/* ----- Style for New Order page ----- */
+.new-order-ingredient-list .ingredient-card{
     display: inline-block;
     width: 120px;
     min-width: none;
     height: 170px;
-    border: #5B5941 2px solid;
+    border: var(--ebony) 2px solid;
     border-radius: 5px;
     vertical-align: top;
     margin: 10px 5px 10px 5px;
-    color: #5B5941;
-    background-color: #E3F09B;
+    background-color: var(--green);
     opacity: 0.7;
-
-
 }
 
 .jog .ingredient-card{
@@ -47,12 +45,12 @@
     width: 120px;
     min-width: none;
     height: 170px;
-    border: #5B5941 2px solid;
+    border: var(--ebony) 2px solid;
     border-radius: 5px;
     vertical-align: top;
     margin: 10px 5px 10px 5px;
-    color: #5B5941;
-    background-color: #E3F09B;
+    color: var(--ebony);
+    background-color: var(--green);
     opacity: 0.7;
 
 
