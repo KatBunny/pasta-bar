@@ -29,35 +29,24 @@ export default function EditIngredientForm({ingredient, getAllAndAvailable}){
     }
     async function handleDelete(event) {
         event.preventDefault()
-        console.log("handleDelete")
-
-        const ingredientId = ingredient._id
-
 
         //Remove from DB
-        //iffy?
-       
-        await ingredientsAPI.remove(ingredientId)
-        //this is breaking us out of this function
-        
-
-
-        //this is not showing
-        console.log("after delete")
+        await ingredientsAPI.remove(ingredient._id)
 
         //RE-RENDER THE LIST
         getAllAndAvailable()
-        setEditedIngredient(initialData)
     }
 
     async function handleUpdate(event) {
         event.preventDefault()
 
         //Update the DB
-        const updatedIngredient = await ingredientsAPI.update(ingredient._id, editedIngredient)
+        //const updatedIngredient = 
+        await ingredientsAPI.update(ingredient._id, editedIngredient)
 
         //RE-RENDER THE LIST
         getAllAndAvailable()
+        setEditedIngredient(initialData)
     }
 
     
