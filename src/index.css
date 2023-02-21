@@ -160,6 +160,11 @@ button[type="submit"] {
   /* margin: 1vmin 0 0; */
 }
 
+button.btn-delete {
+  background-color: var(--red);
+  color: var(--white)
+}
+
 a.links:hover {
   text-decoration: underline var(--yellow);
   text-decoration-thickness: 3px;
