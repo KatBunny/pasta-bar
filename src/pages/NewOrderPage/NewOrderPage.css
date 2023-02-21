@@ -7,15 +7,14 @@
     border: var(--ebony) 2px solid;
     border-radius: 5px;
     margin-right: 20px;
+    margin-left: 20px;
 }
-.ingredient-list-container{
+
+.main-components-container .ingredient-list-container{
     flex-wrap: nowrap;
     align-items: center;
     margin-right: 5px;
     margin-left: 5px;  
-
-
-
 }
 
 .new-order-builder-container{
