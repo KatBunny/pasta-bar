@@ -10,7 +10,7 @@ const ingredientSchema = new Schema(
         },
         image: {
             type: String,
-            default: "./images/icons/noimage.jpg"
+            default: "default.jpg"
         },
         price: {
             type: Number,

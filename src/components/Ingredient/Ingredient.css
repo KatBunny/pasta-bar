@@ -58,10 +58,10 @@
 
 }
 
-.inline{
-    height: 60%;    
+.inline {
+    height: 65%;    
 }
 
 .ingredient-card h3{
-    height: 35%;
+    margin-top: 5%;
 }
