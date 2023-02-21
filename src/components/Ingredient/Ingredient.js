@@ -29,7 +29,8 @@ export default function Ingredient({
                 <h3 className='h3'>{ingredient.name}</h3>
                 <p className='price'>$ {ingredient.price}</p>
                 {/* <img src={Chicken} alt=""/> */}
-                </div>
+                <img className='ingredientImage' src={`/images/icons/${ingredient.image}`} alt='Filler Image' />
+            </div>
 
             {isEditing ?           
                 <EditIngredientForm
@@ -38,7 +39,7 @@ export default function Ingredient({
                 />
                 :
                 isInNewOrder ?
-                    <button onClick={() => removeFromOrder(ingredient._id)}>➖</button>
+                    <button className="btn-delete" onClick={() => removeFromOrder(ingredient._id)}>➖</button>
                     :
                     <button onClick={() => addToOrder(ingredient._id)}>➕</button>
             }

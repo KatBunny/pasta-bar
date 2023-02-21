@@ -22,7 +22,7 @@ const orderSchema = new Schema(
 
 // Total order price
 orderSchema.virtual('orderTotal').get(function () {
-    return this.ingredients.reduce((total, item) => total + item.price, 0)
+    return (this.ingredients.reduce((total, item) => total + item.price, 0)).toFixed(2)
 })
 
 // Total items quantity on the order
