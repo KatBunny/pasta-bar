@@ -30,7 +30,7 @@ export default function IngredientList({
     }
     
     return (
-        <div className="jig">
+        <div className="ingredient-list-container main-sub">
             {ingredientsList && ingredientsList}
         </div>
     )

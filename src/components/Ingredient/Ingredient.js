@@ -31,7 +31,6 @@ export default function Ingredient({
                     :
                     <button onClick={() => addToOrder(ingredient._id)}>➕</button>
             }
-            </div>
-        
+        </div>
     )
 }

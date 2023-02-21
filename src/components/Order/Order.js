@@ -2,7 +2,7 @@
 import "./Order.css"
 
 export default function Order({order}){
-    const ingredientItems = order.ingredients.map((ingredient, index) => (<p className="ingredients" key={index}>{ingredient.name}</p>))
+    const ingredientItems = order.ingredients.map((ingredient, index) => (<div className="ingredients" key={index}>{ingredient.name}</div>))
     return(
         <div className="order-container">
             <div className="order-container-header">
