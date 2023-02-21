@@ -13,11 +13,12 @@ export default function NewOrderBuilder({newOrder, removeFromOrder, placeOrder, 
     return(
         <div className="new-order-builder-container main-sub">
             <h3>Your Order</h3>
+            <div className="jog">
             <IngredientList 
                 ingredients={newOrder}
                 isInNewOrder={true}
                 removeFromOrder={removeFromOrder}
-            />
+            /></div>
             <p>Total cost: ${orderTotal.toFixed(2)}</p>
             <button onClick={handleSubmit} disabled={!newOrder.length}>Place order</button>
         
