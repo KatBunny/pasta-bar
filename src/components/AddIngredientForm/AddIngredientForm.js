@@ -59,6 +59,7 @@ export default function AddIngredientForm({allIngredients, setAllIngredients, ge
                 type="number"
                 name="price"
                 placeholder="Price" 
+                step=".01"
                 value={newIngredient.price}
                 onChange={handleChange}
             />

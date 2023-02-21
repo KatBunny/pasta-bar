@@ -30,8 +30,8 @@ export default function IngredientList({
     }
     
     return (
-        <div className="ingredient-list-container main-sub">
+        <>
             {ingredientsList && ingredientsList}
-        </div>
+        </>
     )
 }
