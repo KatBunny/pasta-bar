@@ -31,7 +31,17 @@ const Orders = require("./models/order")
         {name:'Penne',price:'$6.99', image:'./images/icons/penne.jpg', isAvailable:true},
         {name:'Orzo',price:'$6.99', image:'./images/icons/orzo.png', isAvailable:true},
         {name:'Ravioli',price:'$6.99', image:'./images/icons/ravioli.jpg', isAvailable:true},
-        {name:'Ravioli',price:'$6.99', image:'./images/icons/ravioli.jpg', isAvailable:true},
+        {name:'Alfredo',price:'$6.99', image:'./images/icons/alfredo.png', isAvailable:true},
+        {name:'Cauliflower',price:'$6.99', image:'./images/icons/cauliflower.png', isAvailable:true},
+        {name:'Cheese Sauce',price:'$6.99', image:'./images/icons/cheesesauce.png', isAvailable:true},
+        {name:'Feta',price:'$6.99', image:'./images/icons/feta.png', isAvailable:true},
+        {name:'Marinara',price:'$6.99', image:'./images/icons/marinara.png', isAvailable:true},
+        {name:'Parmesan',price:'$6.99', image:'./images/icons/parme.jpeg', isAvailable:true},
+        {name:'Pecorino',price:'$6.99', image:'./images/icons/pecorino.png', isAvailable:true},
+        {name:'Pesto',price:'$6.99', image:'./images/icons/pesto.png', isAvailable:true},
+        {name:'Ricotta',price:'$6.99', image:'./images/icons/ricotta.png', isAvailable:true},
+        {name:'Spicy Marinara',price:'$6.99', image:'./images/icons/spicymarinara.png', isAvailable:true},
+        
     ])
 
 
