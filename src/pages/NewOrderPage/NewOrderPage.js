@@ -69,7 +69,7 @@ export default function NewOrderPage({ availableIngredients, newOrder, setNewOrd
 
     return (
         <>
-            <h2>New Order Page</h2>
+            <h2>Create your pasta</h2>
             <div className="new-orders-container">
                 <div className="available-ingredients-container main-sub">
                     <h3 className="order-builder-title">Available Ingredients</h3>
