@@ -24,7 +24,7 @@ export default function App() {
     const listOfAvailable = ingredients.filter(ingredient => ingredient.isAvailable)
     setAllIngredients(ingredients)
     setAvailableIngredients(listOfAvailable)
-    console.log("Set Ingredients for State")
+    //console.log("Set Ingredients for State")
   }
 
   useEffect(function() {

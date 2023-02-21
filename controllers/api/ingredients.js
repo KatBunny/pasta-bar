@@ -35,6 +35,8 @@ async function remove(req, res, next) {
         
         if(ingredient) {
             await Ingredients.deleteOne({_id: {$eq: req.params.id}})
+        } else {
+            throw new Error(404)
         }
 
         // const ingredient = await Ingredients.findById(req.params.id)
@@ -54,14 +56,14 @@ async function update(req, res, next) {
     try {
         //ingredient from db (by ID)
         const ingredient = await Ingredients.findById(req.params.id)
-        console.log(ingredient)
+        //console.log(ingredient)
 
         //new ingredient data
         const newIngredient = req.body
-        console.log(newIngredient)
+        //console.log(newIngredient)
 
         const blendedData = Object.assign(ingredient, newIngredient)
-        console.log(blendedData)
+        //console.log(blendedData)
 
         ingredient.updateOne(blendedData)
         ingredient.save()
