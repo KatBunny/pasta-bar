@@ -1,8 +1,3 @@
-
-.past-orders-main-container {
-    font-family: 'Gloock', serif;
-    color: #5B5941;
-}
 .past-orders-container {
     margin-left: auto;
     margin-right: auto;
@@ -10,24 +5,21 @@
 
 .order-container {
     width: 60%;
-    border: #5B5941 2px solid;
+    border: var(--ebony) 2px solid;
     border-radius: 5px;
     margin: 1rem auto 1rem auto;
-    background-color: #87B6A7;
 }
 
 .order-container-header{
     display: flex;
     justify-content: space-evenly;
-    background-color: #F7D08A;
+    background-color: var(--yellow);
     opacity: 0.8;
 }
-
 
 .order-ingredients-container{
     flex-wrap: nowrap;
     align-items: center;
-    
 }
 
 .ingredients{
@@ -36,13 +28,11 @@
     min-width: none;
     height: 150px;
     max-height: 150px;
-    border: #5B5941 2px solid;
+    border: var(--ebony) 2px solid;
     border-radius: 5px;
     vertical-align: top;
     margin-left: 5px;
     margin-right: 5px;
-    color: #5B5941;
-    background-color: #E3F09B;
+    color: var(--ebony);
     opacity: 0.7;
-
 }

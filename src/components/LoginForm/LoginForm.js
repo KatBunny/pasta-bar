@@ -1,6 +1,7 @@
 // LoginForm.jsx
 import { useState } from 'react';
 import * as usersService from '../../utilities/users-service';
+import "../../pages/AuthPage/AuthPage.css"
  
 export default function LoginForm({ setUser }) {
   const [credentials, setCredentials] = useState({
@@ -20,7 +21,6 @@ export default function LoginForm({ setUser }) {
     try {
       // The promise returned by the signUp service method 
       // will resolve to the user object included in the
-      // payload of the JSON Web Token (JWT)
       const user = await usersService.login(credentials);
       console.log("UserData: ", user)
       setUser(user);
@@ -30,7 +30,7 @@ export default function LoginForm({ setUser }) {
   }
 
   return (
-    <div>
+    <div className="auth-container">
       <div className="form-container">
         <form autoComplete="off" onSubmit={handleSubmit}>
           <label>Email</label>
@@ -47,7 +47,7 @@ export default function LoginForm({ setUser }) {
           value={credentials.password} 
           onChange={handleChange} 
           required />
-          <button type="submit">LOG IN</button>
+          <button type="submit">Login</button>
         </form>
       </div>
       <p className="error-message">&nbsp;{error}</p>
