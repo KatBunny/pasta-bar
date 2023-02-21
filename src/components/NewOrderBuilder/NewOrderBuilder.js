@@ -12,8 +12,8 @@ export default function NewOrderBuilder({newOrder, removeFromOrder, placeOrder, 
 
     return(
         <div className="new-order-builder-container main-sub">
-            <h3>Your Order</h3>
-            <div className="jog">
+            <h3 className="order-builder-title">Your Order</h3>
+            <div className="order-builder-ingredient-list">
             <IngredientList 
                 ingredients={newOrder}
                 isInNewOrder={true}

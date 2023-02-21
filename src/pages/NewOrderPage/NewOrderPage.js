@@ -72,7 +72,7 @@ export default function NewOrderPage({ availableIngredients, newOrder, setNewOrd
             <h2>New Order Page</h2>
             <div className="new-orders-container">
                 <div className="available-ingredients-container main-sub">
-                    <h3>Available Ingredients</h3>
+                    <h3 className="order-builder-title">Available Ingredients</h3>
                     <div className="new-order-ingredient-list">
                         <IngredientList 
                         ingredients={availableIngredients} //change back to availableIngredients

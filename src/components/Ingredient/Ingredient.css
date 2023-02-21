@@ -37,10 +37,10 @@
     vertical-align: top;
     margin: 10px 5px 10px 5px;
     background-color: var(--green);
-    opacity: 0.7;
+    /* opacity: 0.7; */
 }
 
-.jog .ingredient-card{
+.order-builder-ingredient-list .ingredient-card{
     display: inline-block;
     width: 120px;
     min-width: none;
@@ -49,13 +49,6 @@
     border-radius: 5px;
     vertical-align: top;
     margin: 10px 5px 10px 5px;
-    color: var(--ebony);
-    background-color: var(--green);
-    opacity: 0.7;
-
-
-}
-
-.jog button{
-    
+    background-color: var(--blue);
+    /* opacity: 0.7; */
 }

@@ -12,8 +12,7 @@ export default function Ingredient({
     getAllAndAvailable
 }){
 
-    return(
-        
+    return (
             <div className='ingredient-container ingredient-card'>
                 <div className='inline'>
                 <h3 className='h3'>{ingredient.name}</h3>
