@@ -43,7 +43,9 @@ export default function AddIngredientForm({allIngredients, setAllIngredients, ge
 
     return (
         <form className="add-form" autoComplete="off">
-            <h3></h3>
+            <div className="addie">
+            <h3 >Add Ingredient</h3></div>
+            <div className="add-formy">
             <label>Name</label>
             <input 
                 type="text"
@@ -76,6 +78,7 @@ export default function AddIngredientForm({allIngredients, setAllIngredients, ge
             <button className="btn-add" type="submit" onClick={handleCreateIngredient}>
                 Add ingredient
             </button>
+            </div>
         </form>
     )
 }

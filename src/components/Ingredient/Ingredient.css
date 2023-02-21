@@ -14,7 +14,7 @@
     display:flex;
 }
 .edit-list-container .edit-form{
-    background-color: var(--blue);
+    background-color: var(--white);
     padding: 2vh;
     color: var(--ebony);
 }
