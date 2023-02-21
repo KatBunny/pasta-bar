@@ -2,7 +2,7 @@
     display: flex;
 }
 
-.main-sub{
+.main-components-container .main-sub{
     flex:1;
     border: var(--ebony) 2px solid;
     border-radius: 5px;
