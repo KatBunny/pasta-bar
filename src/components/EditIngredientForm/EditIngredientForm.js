@@ -8,7 +8,6 @@ export default function EditIngredientForm({ingredient, getAllAndAvailable}){
     const initialData = {
         _id: ingredient._id,
         name: ingredient.name,
-        // emoji: ingredient.emoji,
         price: ingredient.price,
         isAvailable: ingredient.isAvailable
     }
@@ -62,14 +61,6 @@ export default function EditIngredientForm({ingredient, getAllAndAvailable}){
                 value={editedIngredient.name}
                 onChange={handleChange}
             />
-            {/* <label>Ingredient Image</label>
-            <input 
-                type="text"
-                name="emoji"
-                placeholder="Image" 
-                value={editedIngredient.emoji}
-                onChange={handleChange}
-            /> */}
             <label>Price</label>
             <input 
                 type="number"

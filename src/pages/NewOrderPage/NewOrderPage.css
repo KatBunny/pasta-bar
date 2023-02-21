@@ -1,17 +1,23 @@
-.main-components-container{
+.new-orders-container{
     display: flex;
 }
 
-.main-components-container .main-sub{
+h3.order-builder-title {
+    border-bottom: var(--ebony) 2px solid;
+    padding-bottom: 1rem;
+}
+
+.new-orders-container .main-sub{
     flex:1;
-    border: var(--ebony) 2px solid;
+    /* border: var(--ebony) 1px solid; */
     border-radius: 5px;
     margin-right: 20px;
     margin-left: 20px;
 }
-.jig {
+
+.new-order-ingredient-list {
     flex-wrap: nowrap;
     align-items: center;
     margin-right: 5px;
-    margin-left: 5px;  
+    margin-left: 5px;
 }
