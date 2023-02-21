@@ -1,5 +1,6 @@
 // Specific ingredient item
 import EditIngredientForm from '../EditIngredientForm/EditIngredientForm'
+
 import "./Ingredient.css"
 //import Chicken from "../../images/icons/chicken.png"
 
@@ -31,11 +32,13 @@ export default function Ingredient({
                 <img className='ingredientImage' src={`/images/icons/${ingredient.image}`} alt='Filler Image' />
             </div>
 
-            {isEditing ?           
+            {isEditing ?
+            <>
+                       
                 <EditIngredientForm
                     ingredient={ingredient}
                     getAllAndAvailable={getAllAndAvailable}
-                />
+                /></>
                 :
                 isInNewOrder ?
                     <button className="btn-delete" onClick={() => removeFromOrder(ingredient._id)}>➖</button>

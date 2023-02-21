@@ -36,6 +36,6 @@
 .add-formy{
     display: flex;
     flex-direction: row;
-    margin: 2vh;
+    margin: 2vh auto;
     width: fit-content;
 }
