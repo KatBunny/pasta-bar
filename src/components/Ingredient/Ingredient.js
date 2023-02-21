@@ -18,6 +18,7 @@ export default function Ingredient({
                 <div className='inline'>
                 <h3 className='h3'>{ingredient.name}</h3>
                 <p className='price'>$ {ingredient.price}</p>
+                <img src={ingredient.image} />
                 </div>
 
             {isEditing ?           

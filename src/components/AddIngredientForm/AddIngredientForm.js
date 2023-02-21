@@ -6,7 +6,6 @@ export default function AddIngredientForm({allIngredients, setAllIngredients, ge
     
     const intialData = {
         name: "New Ingredient",
-        // emoji: "",
         price: 0.00,
         isAvailable: true
     }
@@ -55,12 +54,6 @@ export default function AddIngredientForm({allIngredients, setAllIngredients, ge
                 value={newIngredient.name}
                 onChange={handleChange}
             />
-            {/* <label>Ingredient Image</label>
-            <input 
-                type="text"
-                name="emoji"
-                placeholder="Emoji"
-            /> */}
             <label>Price</label>
             <input 
                 type="number"
