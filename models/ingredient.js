@@ -8,7 +8,10 @@ const ingredientSchema = new Schema(
             type: String,
             required: true
         },
-        emoji: String,
+        image: {
+            type: String,
+            default: "./images/icons/noimage.jpg"
+        },
         price: {
             type: Number,
             required: true,
