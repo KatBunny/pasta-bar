@@ -23,7 +23,7 @@
 }
 
 .ingredients{
-    display: inline-block;
+    /* display: inline-block;
     width: 120px;
     min-width: none;
     height: 150px;
@@ -33,5 +33,16 @@
     vertical-align: top;
     margin: 5px 5px 10px 5px;
     color: var(--ebony);
+    opacity: 0.7; */
+    display: inline-block;
+    width: 120px;
+    min-width: none;
+    height: 170px;
+    border: #5B5941 2px solid;
+    border-radius: 5px;
+    vertical-align: top;
+    margin: 10px 5px 10px 5px;
+    color: #5B5941;
+    background-color: #E3F09B;
     opacity: 0.7;
 }
