@@ -1,3 +1,11 @@
+//run in terminal with:
+//node seed
+
+//this will wipe out all orders and ingredients from the db
+//and load up the initial set of ingredients
+
+
+
 require('dotenv').config()
 require('.config/database')
 

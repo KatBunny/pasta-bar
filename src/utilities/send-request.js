@@ -19,8 +19,11 @@ export default async function sendRequest(url, method="GET", payload=null) {
 
     const res = await fetch(url, options) 
     if(res.ok) {
-        console.log(res)
-        return (res.json())
+        if (res.status === 204) {
+            return res
+        } else {
+            return (res.json())
+        }
     } else {
         console.log(res.error)
         throw new Error("Bad Request")

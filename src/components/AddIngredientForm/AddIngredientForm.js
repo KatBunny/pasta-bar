@@ -31,7 +31,8 @@ export default function AddIngredientForm({allIngredients, setAllIngredients, ge
         event.preventDefault()
 
         //Add to the DB
-        const createdIngredient = await ingredientsAPI.create(newIngredient)
+        //const createdIngredient = 
+        await ingredientsAPI.create(newIngredient)
 
         //RE-RENDER THE LIST
         getAllAndAvailable()
