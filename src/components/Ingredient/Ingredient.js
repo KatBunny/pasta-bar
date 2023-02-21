@@ -26,10 +26,10 @@ export default function Ingredient({
     return(
             <div className='ingredient-container ingredient-card'>
                 <div className='inline'>
-                <h3 className='h3'>{ingredient.name}</h3>
-                <p className='price'>$ {ingredient.price}</p>
                 {/* <img src={Chicken} alt=""/> */}
                 <img className='ingredientImage' src={`/images/icons/${ingredient.image}`} alt='Filler Image' />
+                <h3 className='h3'>{ingredient.name}</h3>
+                <p className='price'>$ {ingredient.price}</p>
             </div>
 
             {isEditing ?
