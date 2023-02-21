@@ -30,8 +30,16 @@ async function create(req, res, next) {
 async function remove(req, res, next) {
     try {
         console.log("in the remove ingredient function")
+        
         const ingredient = await Ingredients.findById(req.params.id)
-        await ingredient.deleteOne()
+        
+        if(ingredient) {
+            await Ingredients.deleteOne({_id: {$eq: req.params.id}})
+        }
+
+        // const ingredient = await Ingredients.findById(req.params.id)
+        // await ingredient.deleteOne()
+
         res.sendStatus(204)
 
         //we think the problem may be with this res.sendStatus
