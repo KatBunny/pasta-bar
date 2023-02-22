@@ -27,3 +27,10 @@
     margin-right: auto;
     margin-left: 5vw;
 }
+
+.edit-list-container .ingredient-name-and-price {
+    display: inline-flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+}

@@ -30,9 +30,9 @@
 /* styles for available ingredient items */
 .new-order-ingredient-list .ingredient-card{
     display: inline-block;
-    width: 120px;
+    width: 260px;
     min-width: none;
-    height: 170px;
+    height: 70px;
     border: var(--ebony) 2px solid;
     border-radius: 5px;
     vertical-align: top;
@@ -44,27 +44,34 @@
 .new-order-ingredient-list .ingredient-card-details {
     display: inline-flex;
     flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
 }
 
 .new-order-ingredient-list .ingredient-card-details h3 {
-    margin-top: 0;
-    margin-bottom: 0px;
+    margin: 0 5px;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 .new-order-ingredient-list .ingredient-card-details p {
-    margin-top: 0;
-    margin-bottom: 0px;
+    margin: 0 5px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 .new-order-ingredient-list .ingredient-card-details img {
-    margin-top: .5em;
-    margin-bottom: .5em;
+    margin: .5em;
+    /* margin-bottom: .5em; */
+    
 }
 
 /* ingredient item cards in order builder */
 .order-builder-ingredient-list .ingredient-card{
-    display: inline-block;
-    width: 120px;
+    display: inline-flex;
+    width: 260px;
     min-width: none;
-    height: 170px;
+    height: 70px;
     border: var(--ebony) 2px solid;
     border-radius: 5px;
     vertical-align: top;
@@ -74,17 +81,27 @@
     background-color: var(--blue);
 }
 
+.order-builder-ingredient-list .ingredient-card-details {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
 .order-builder-ingredient-list .ingredient-card-details h3 {
-    margin-top: 0;
-    margin-bottom: 0px;
+    margin: 0 5px;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 .order-builder-ingredient-list .ingredient-card-details p {
-    margin-top: 0;
-    margin-bottom: 0px;
+    margin: 0 5px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 .order-builder-ingredient-list .ingredient-card-details img {
-    margin-top: .5em;
-    margin-bottom: .5em;
+    margin: .5em;
 }
 
 

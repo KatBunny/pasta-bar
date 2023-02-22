@@ -19,7 +19,7 @@ export default function Ingredient({
         <div className='ingredient-container ingredient-card'>
             <div className='ingredient-card-details'>
                 <img className='ingredient-image' src={`/images/icons/${ingredient.image}`} alt='Filler Image' />
-                <div>
+                <div className="ingredient-name-and-price">
                     <h3 className='ingredient-name'>{ingredient.name}</h3>
                     <p className='ingredient-price'>$ {ingredient.price}</p>
                 </div>
