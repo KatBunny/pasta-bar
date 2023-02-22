@@ -3,19 +3,19 @@ Build-your-own restaurants have been on the rise, but we have yet to see one to 
 
 <figure>
     <figcaption>Login</figcaption>
-    <img alt="Login" src="public/images/login-page.jpg" width="70%" height="70%">
+    <img alt="Login" src="public/images/login-page.jpg" width="85%" height="85%">
 </figure>
 <figure>
     <figcaption>Build your own pasta bowl</figcaption>
-    <img alt="new-order" src="public/images/new-order-page.jpg" width="70%" height="70%">
+    <img alt="new-order" src="public/images/new-order-page.jpg" width="85%" height="85%">
 </figure>
 <figure>
     <figcaption>Edit menu page upon login as an admin</figcaption>
-    <img alt="edit-menu" src="public/images/edit-menu-page.jpg" width="70%" height="70%">
+    <img alt="edit-menu" src="public/images/edit-menu-page.jpg" width="85%" height="85%">
 </figure>
 <figure>
     <figcaption>Order History</figcaption>
-    <img alt="order-history" src="public/images/order-history-page.jpg" width="70%" height="70%">
+    <img alt="order-history" src="public/images/order-history-page.jpg" width="85%" height="85%">
 </figure>
 
 
