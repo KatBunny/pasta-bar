@@ -3,8 +3,6 @@ import * as usersAPI from "./users-api"
 export async function signUp(userData) {
     const token = await usersAPI.signUp(userData)
    
-    // return token
-    //instead of returning the token
     localStorage.setItem("token", token)
     return getUser()
 }
@@ -13,8 +11,8 @@ export function getToken() {
     //get token from localStorage
     const token = localStorage.getItem("token")
     if(!token) return null
-    //get token's payload, use string.split
 
+    //get token's payload
     const payload = token.split(".")[1]
     //JWT's are base64 encoded
     //need to decode it to make it useable 
@@ -45,7 +43,6 @@ export function getUser() {
     } else {
         return null
     }
-
 }
 
 export function logOut() {
@@ -56,8 +53,6 @@ export async function login(credentials) {
     //call login from users-api
     //should be creating a token by loggin in 
     const token = await usersAPI.login(credentials)
-
-   //console.log("Token: " + token)
 
     //save the token, return the user
     localStorage.setItem("token", token)

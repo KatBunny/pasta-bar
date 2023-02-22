@@ -1,4 +1,3 @@
-// LoginForm.jsx
 import { useState } from 'react';
 import * as usersService from '../../utilities/users-service';
 import "../../pages/AuthPage/AuthPage.css"
@@ -16,13 +15,9 @@ export default function LoginForm({ setUser }) {
   }
 
   async function handleSubmit(evt) {
-    // Prevent form from being submitted to the server
     evt.preventDefault();
     try {
-      // The promise returned by the signUp service method 
-      // will resolve to the user object included in the
       const user = await usersService.login(credentials);
-      console.log("UserData: ", user)
       setUser(user);
     } catch {
       setError('Log In Failed - Try Again');
@@ -42,11 +37,11 @@ export default function LoginForm({ setUser }) {
             required />
           <label>Password</label>
           <input 
-          type="password" 
-          name="password" 
-          value={credentials.password} 
-          onChange={handleChange} 
-          required />
+            type="password" 
+            name="password" 
+            value={credentials.password} 
+            onChange={handleChange} 
+            required />
           <button className="auth-button" type="submit">Login</button>
         </form>
       </div>

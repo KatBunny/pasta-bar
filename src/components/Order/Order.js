@@ -1,5 +1,4 @@
 // Show orders on PastOrdersPage
-import IngredientList from "../IngredientList/IngredientList"
 import "./Order.css"
 
 export default function Order({order}){
@@ -15,7 +14,6 @@ export default function Order({order}){
                 <h3>Ingredients:</h3>
                 <div className="order-ingredients-container">
                     {ingredientItems}
-                    {/* <IngredientList className="" ingredients={order.ingredients} /> */}
                 </div>
             </div>
         </div>
