@@ -20,7 +20,7 @@ export default function Ingredient({
                     <h3 className='ingredient-name'>{ingredient.name}</h3>
                     <p className='ingredient-price'>$ {ingredient.price}</p>
                 </div>
-                <div>
+                
                 {isEditing ?
                     <EditIngredientForm
                         ingredient={ingredient}
@@ -30,10 +30,10 @@ export default function Ingredient({
                     isInNewOrder ?
                         <button className="btn-delete" onClick={() => removeFromOrder(ingredient._id)}>➖</button>
                         :
-                        <button onClick={() => addToOrder(ingredient._id)}>➕</button>
+                        <button className='btn-add-order' onClick={() => addToOrder(ingredient._id)}>➕</button>
                         // className='btn-add-order'
                 }
-                </div>
+                
             </div>
         </div>
     )
