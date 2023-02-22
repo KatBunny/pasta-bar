@@ -5,7 +5,7 @@ export default function Order({order}){
     const ingredientItems = order.ingredients.map((ingredient, index) => (
         <div className="ingredients" key={index}>
             <h3>{ingredient.name}</h3>
-            <img className='ingredientImage' src={`/images/icons/${ingredient.image}`} alt='Filler Image' />
+            <img className='ingredientImage' src={`/images/icons/${ingredient.image}`} alt='ingredient' />
         </div>
     ))
 
