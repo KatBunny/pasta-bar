@@ -27,7 +27,6 @@ orderSchema.virtual('orderTotal').get(function () {
 
 // Total items quantity on the order
 orderSchema.virtual('totalQty').get(function () {
-	// return this.ingredients.reduce((total, item) => total + item, 0)
     return this.ingredients.length
 })
 
@@ -38,7 +37,6 @@ orderSchema.virtual('orderId').get(function () {
 // Order's created date
 orderSchema.virtual('createdDate').get(function () {
         return this.createdAt.toLocaleDateString();
-
 })
 
 // * (!!Delete) We don't have cart as we are not implementing payments function so instead of cart I replaced to order
@@ -55,14 +53,5 @@ orderSchema.statics.getOrder = function (userId) {
 		{ upsert: true, new: true }
 	)
 }
-
-
-// orderSchema.methods.addIngredientToOrder = async function (ingredientId) {
-//     const order = this
-//     const ingredient = await mongoose.model('Ingredient').findById(ingredientId)
-//     order.ingredients.push({ ingredient })
-//     return order.save()
-// }
-
 
 module.exports = mongoose.model('Order', orderSchema)

@@ -17,14 +17,11 @@ export default function App() {
   const [showOrders, setShowOrders] = useState([])
   const [orderTotal, setOrderTotal] = useState(0)
 
-
   async function getAllAndAvailable() {
-    //console.log('useEffect runs only after first render');
     const ingredients = await ingredientsAPI.show()
     const listOfAvailable = ingredients.filter(ingredient => ingredient.isAvailable)
     setAllIngredients(ingredients)
     setAvailableIngredients(listOfAvailable)
-    //console.log("Set Ingredients for State")
   }
 
   useEffect(function() {
@@ -32,10 +29,8 @@ export default function App() {
   }, []
   );
 
-
   return (
     <main className="App">
-  
       {/* terinary for conditional rendering */}
       {user ? (
         <>
@@ -71,7 +66,6 @@ export default function App() {
               />
             } />
             <Route path="/*" element={<Navigate to="/orders/new" />} />
-
           </Routes>
         </>
       ) : (

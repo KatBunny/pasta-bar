@@ -1,9 +1,13 @@
 // Show orders on PastOrdersPage
-import IngredientList from "../IngredientList/IngredientList"
 import "./Order.css"
 
 export default function Order({order}){
-    const ingredientItems = order.ingredients.map((ingredient, index) => (<div className="ingredients" key={index}><h3>{ingredient.name}</h3></div>))
+    const ingredientItems = order.ingredients.map((ingredient, index) => (
+        <div className="ingredients" key={index}>
+            <h3>{ingredient.name}</h3>
+            <img className='ingredientImage' src={`/images/icons/${ingredient.image}`} alt='Filler Image' />
+        </div>
+    ))
 
     return(
         <div className="order-container">
@@ -15,7 +19,6 @@ export default function Order({order}){
                 <h3>Ingredients:</h3>
                 <div className="order-ingredients-container">
                     {ingredientItems}
-                    {/* <IngredientList className="" ingredients={order.ingredients} /> */}
                 </div>
             </div>
         </div>

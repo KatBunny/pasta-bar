@@ -1,17 +1,13 @@
-//run in terminal with:
-//node seed
+//run in terminal with: node seed.js
 
 //this will wipe out all orders and ingredients from the db
 //and load up the initial set of ingredients
-
-
 
 require('dotenv').config()
 require("./config/database")
 
 const Ingredients = require('./models/ingredient')
 const Orders = require("./models/order")
-
 
 ;(async function () {
     await Orders.deleteMany({})
@@ -41,9 +37,6 @@ const Orders = require("./models/order")
         {name:'Ricotta',price: 4.99, image:'ricotta.png', isAvailable:true},
         {name:'Spicy Marinara',price: 3.99, image:'spicymarinara.png', isAvailable:true},
     ])
-
-
-console.log(ingredients)
 
 process.exit()
 })()
