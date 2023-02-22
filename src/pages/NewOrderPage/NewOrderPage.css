@@ -1,23 +1,23 @@
-.new-orders-container{
-    display: flex;
+.new-orders-container {
+  display: flex;
 }
 
 h3.order-builder-title {
-    border-bottom: var(--ebony) 2px solid;
-    padding-bottom: 1rem;
+  border-bottom: var(--ebony) 2px solid;
+  padding-bottom: 1rem;
 }
 
-.new-orders-container .main-sub{
-    flex:1;
-    /* border: var(--ebony) 1px solid; */
-    border-radius: 5px;
-    margin-right: 20px;
-    margin-left: 20px;
+.new-orders-container .main-sub {
+  flex: 1;
+  /* border: var(--ebony) 1px solid; */
+  border-radius: 5px;
+  margin-right: 20px;
+  margin-left: 20px;
 }
 
 .new-order-ingredient-list {
-    flex-wrap: nowrap;
-    align-items: center;
-    margin-right: 5px;
-    margin-left: 5px;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin-right: 5px;
+  margin-left: 5px;
 }

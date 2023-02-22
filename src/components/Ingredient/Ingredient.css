@@ -1,156 +1,148 @@
 /* ----- Style for Edit Menu page ----- */
 .edit-list-container .ingredient-container {
-    width: 50vw;
-    margin: auto;
-    border: 1px solid var(--ebony);
-    border-radius: 5px;
-    background-color: var(--green);
-    margin-bottom: 4vh;
-     box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px; 
-   
+  width: 50vw;
+  margin: auto;
+  border: 1px solid var(--ebony);
+  border-radius: 5px;
+  background-color: var(--green);
+  margin-bottom: 4vh;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+    rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
 }
-.edit-list-container .ingredient-name-and-price{
-    flex-direction: row;
-    color: var(--ebony);
-    display: flex;
+.edit-list-container .ingredient-name-and-price {
+  flex-direction: row;
+  color: var(--ebony);
+  display: flex;
 }
-.edit-list-container .edit-form{
-    background-color: var(--white);
-    padding: 2vh;
-    color: var(--ebony);
+.edit-list-container .edit-form {
+  background-color: var(--white);
+  padding: 2vh;
+  color: var(--ebony);
 }
-.edit-list-container .ingredient-name{
-    margin: 2vh auto 2vh 10vw;
+.edit-list-container .ingredient-name {
+  margin: 2vh auto 2vh 10vw;
 }
-.edit-list-container .ingredient-price{
-    margin: 2vh 10vw 2vh auto;
+.edit-list-container .ingredient-price {
+  margin: 2vh 10vw 2vh auto;
 }
-.edit-list-container .btn-add-order{
-    display: none;
+.edit-list-container .btn-add-order {
+  display: none;
 }
-.edit-list-container .ingredient-image1{
-    display: none;
+.edit-list-container .ingredient-image1 {
+  display: none;
 }
 
 /* ----- Style for New Order page ----- */
 /* styles for available ingredient items */
-.new-order-ingredient-list .ingredient-card{
-    display: inline-block;
-    width: 260px;
-    min-width: none;
-    height: 70px;
-    border: var(--ebony) 2px solid;
-    border-radius: 5px;
-    vertical-align: top;
-    margin: 10px 5px 10px 5px;
-    background-color: var(--green);
-    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px; 
+.new-order-ingredient-list .ingredient-card {
+  display: inline-block;
+  width: 260px;
+  min-width: none;
+  height: 70px;
+  border: var(--ebony) 2px solid;
+  border-radius: 5px;
+  vertical-align: top;
+  margin: 10px 5px 10px 5px;
+  background-color: var(--green);
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+    rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
 }
 
-
 .new-order-ingredient-list .ingredient-card-details {
-    display: inline-flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
-    align-content: center;
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
 }
 
 .new-order-ingredient-list .ingredient-card-details h3 {
-    margin: 0 5px;
-    padding-left: 1rem;
-    padding-right: 1rem;
+  margin: 0 5px;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 .new-order-ingredient-list .ingredient-card-details p {
-    margin: 0 5px;
-    padding-left: 10px;
-    padding-right: 10px;
+  margin: 0 5px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .new-order-ingredient-list .ingredient-card-details .ingredient-image1 {
-    margin: .5em;
-    /* margin-bottom: .5em; */
-    
-} 
+  margin: 0.5em;
+  /* margin-bottom: .5em; */
+}
 .new-order-ingredient-list .ingredient-name-and-price .ingredient-image2 {
-    /* margin: .5em; */
-    /* margin-bottom: .5em; */
-    display: none;
-    
-} 
-.new-order-ingredient-list .btn-add-order{
-    display: none;
+  /* margin: .5em; */
+  /* margin-bottom: .5em; */
+  display: none;
 }
 
 /* ingredient item cards in order builder */
-.order-builder-ingredient-list .ingredient-card{
-    display: inline-flex;
-    width: 260px;
-    min-width: none;
-    height: 70px;
-    border: var(--ebony) 2px solid;
-    border-radius: 5px;
-    vertical-align: top;
-    margin: 10px 5px 10px 5px;
-    background-color: var(--blue);
-    color: var(--white);
-    background-color: var(--blue);
-    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px; 
+.order-builder-ingredient-list .ingredient-card {
+  display: inline-flex;
+  width: 260px;
+  min-width: none;
+  height: 70px;
+  border: var(--ebony) 2px solid;
+  border-radius: 5px;
+  vertical-align: top;
+  margin: 10px 5px 10px 5px;
+  background-color: var(--blue);
+  color: var(--white);
+  background-color: var(--blue);
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+    rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
 }
-.btn-delete{
-    /* margin-top: 4vh; */
+.btn-delete {
+  /* margin-top: 4vh; */
 }
-.btn-add-order{
-    margin-top: 4vh;
+.btn-add-order {
+  /* margin-top: 4vh; */
 }
-
-
 
 .order-builder-ingredient-list .ingredient-card-details {
-    display: inline-flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
-    align-content: center;
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
 }
 
 .order-builder-ingredient-list .ingredient-card-details h3 {
-    margin: 0 5px;
-    padding-left: 1rem;
-    padding-right: 1rem;
+  margin: 0 5px;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 .order-builder-ingredient-list .ingredient-card-details p {
-    margin: 0 5px;
-    padding-left: 10px;
-    padding-right: 10px;
+  margin: 0 5px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .order-builder-ingredient-list .ingredient-card-details .ingredient-image2 {
-    margin: .5em;
-    display: none;
+  margin: 0.5em;
+  display: none;
 }
 
 .order-builder-ingredient-list .ingredient-card-details .ingredient-image1 {
-    margin: .5em;
-    /* display: none; */
+  margin: 0.5em;
+  /* display: none; */
 }
-.order-builder-ingredient-list .btn-add-order{
-    display: none;
+.order-builder-ingredient-list .btn-add-order {
+  display: none;
 }
-
-
 
 /* .ingredient-card h3{
     height: 35%;
 } */
 
 .ingredient-image1 {
-    width: 50px;
-    height: 50px;
-    background-color: var(--white);
+  width: 50px;
+  height: 50px;
+  background-color: var(--white);
 }
 .ingredient-image2 {
-    width: 50px;
-    height: 50px;
-    background-color: var(--white);
+  width: 50px;
+  height: 50px;
+  background-color: var(--white);
 }
