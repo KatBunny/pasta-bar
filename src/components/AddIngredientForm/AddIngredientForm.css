@@ -1,41 +1,41 @@
-.add-form{
-    display: flex;
-    flex-direction: column;
-    border: 1px solid var(--ebony);
-    width: 80vw;
-    min-width: fit-content;
-    margin: auto;
-    border-radius: 5px;
-    background-color: var(--green);
-    padding: 0;
-    margin-bottom: 5vh;
-    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
-}   
-.add-form label{
-    margin: auto;
-    padding: 0;
+.add-form {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--ebony);
+  width: 80vw;
+  min-width: fit-content;
+  margin: auto;
+  border-radius: 5px;
+  background-color: var(--green);
+  padding: 0;
+  margin-bottom: 5vh;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+    rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
 }
-.add-form input{
-    max-width: 20vw;
-    margin: auto .4vh;
-    /* padding: 0; */
-    border: 1px solid var(--ebony);
+.add-form label {
+  margin: auto;
+  padding: 0;
 }
-.btn-add{
-    max-width: 20vw;
-    margin: auto;
-    border: 2px solid var(--ebony);
+.add-form input {
+  max-width: 20vw;
+  margin: auto 0.4vh;
+  /* padding: 0; */
+  border: 1px solid var(--ebony);
 }
-.addie{
-    display: flex;
-    flex-direction: column;
-    height: 4vh;
-    margin-bottom: 3vh;
-    
+.btn-add {
+  max-width: 20vw;
+  margin: auto;
+  border: 2px solid var(--ebony);
 }
-.add-formy{
-    display: flex;
-    flex-direction: row;
-    margin: 2vh auto;
-    width: fit-content;
+.addie {
+  display: flex;
+  flex-direction: column;
+  height: 4vh;
+  margin-bottom: 3vh;
+}
+.add-formy {
+  display: flex;
+  flex-direction: row;
+  margin: 2vh auto;
+  width: fit-content;
 }
