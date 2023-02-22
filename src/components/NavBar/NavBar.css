@@ -1,14 +1,15 @@
 .icon{
+  
     margin: auto;
-    margin-bottom: 2vh;
+    margin-bottom: 5vh;
     padding: 0vh o 1vh 0;
     border: 2px solid #F7D08A;
     border-radius: 60%;
     background-color: white;
-    max-height: 10vh;
+    max-height: 20vh;
     width: 10vw;
     max-width: 8vw;
-    margin-top: 1vh;
+    margin-top: 9vh;
   }
   .title{
     /* display: inline-flex; */
@@ -36,7 +37,7 @@
   }
   .design{
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
 
     order: 1 ;
   
