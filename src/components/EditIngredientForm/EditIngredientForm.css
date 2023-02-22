@@ -21,9 +21,16 @@
     margin-bottom: 3vh;
     margin-right: 5vw;
     margin-top: 1.5vh;
-    
+    min-width: fit-content;
 }
 .inputss{
     margin-right: auto;
     margin-left: 5vw;
+}
+
+.edit-list-container .ingredient-name-and-price {
+    display: inline-flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
 }

@@ -1,5 +1,4 @@
 //-----Backend Orders Controllers-----//
-
 const ingredient = require("../../models/ingredient")
 const Order = require("../../models/order")
 
@@ -7,7 +6,6 @@ const Order = require("../../models/order")
 async function show(req, res, next) {
     try {
         const orders = await Order.find({user: {$eq: req.user._id}}).populate("ingredients")
-        //const orders = await Order.find({})
         res.json(orders)
     } catch (error) {
         console.error(error)
@@ -25,6 +23,5 @@ async function create(req, res, next) {
         res.status(400).json(error)
     }
 }
-
 
 module.exports = {create, show}

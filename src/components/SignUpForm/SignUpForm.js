@@ -16,7 +16,6 @@ export default class SignUpForm extends Component {
         this.setState({
             [event.target.name]: event.target.value,
             error: ""
-
         })
     }
     handleSubmit = async (event) => {
@@ -28,13 +27,9 @@ export default class SignUpForm extends Component {
 
             //wait for a response from the server
             const user = await signUp(formData)
-            //logging the token
-            console.log("UserData: ", user)
-            // console.log(this.props)
             this.props.setUser(user)
 
         } catch (error) {
-            //if the try doesn't work, error handle
             console.error(error)
             this.setState({
                 error:"Sign Up failed, try again later "
@@ -65,7 +60,6 @@ export default class SignUpForm extends Component {
                     </form>
                 </div>
                     <p className="error-message">&nbsp;{this.state.error}</p>
-
             </div>
         )
     }

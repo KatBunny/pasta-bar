@@ -1,9 +1,7 @@
 //-----Frontend Ingredients API-----//
-
 import sendRequest from './send-request'
 
 const BASE_URL = "/api/ingredients"
-
 
 export async function show() {
     return sendRequest(BASE_URL, "GET")
