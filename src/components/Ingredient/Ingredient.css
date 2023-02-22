@@ -27,11 +27,12 @@
 }
 
 /* ----- Style for New Order page ----- */
+/* styles for available ingredient items */
 .new-order-ingredient-list .ingredient-card{
     display: inline-block;
-    width: 120px;
+    width: 260px;
     min-width: none;
-    height: 220px;
+    height: 70px;
     border: var(--ebony) 2px solid;
     border-radius: 5px;
     vertical-align: top;
@@ -39,11 +40,38 @@
     background-color: var(--green);
 }
 
+
+.new-order-ingredient-list .ingredient-card-details {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
+.new-order-ingredient-list .ingredient-card-details h3 {
+    margin: 0 5px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.new-order-ingredient-list .ingredient-card-details p {
+    margin: 0 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.new-order-ingredient-list .ingredient-card-details img {
+    margin: .5em;
+    /* margin-bottom: .5em; */
+    
+}
+
+/* ingredient item cards in order builder */
 .order-builder-ingredient-list .ingredient-card{
-    display: inline-block;
-    width: 120px;
+    display: inline-flex;
+    width: 260px;
     min-width: none;
-    height: 220px;
+    height: 70px;
     border: var(--ebony) 2px solid;
     border-radius: 5px;
     vertical-align: top;
@@ -59,15 +87,35 @@
     margin-top: 4vh;
 }
 
-.inline{
-    height: 60%;    
+.order-builder-ingredient-list .ingredient-card-details {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
 }
 
-.ingredient-card h3{
+.order-builder-ingredient-list .ingredient-card-details h3 {
+    margin: 0 5px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.order-builder-ingredient-list .ingredient-card-details p {
+    margin: 0 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.order-builder-ingredient-list .ingredient-card-details img {
+    margin: .5em;
+}
+
+
+/* .ingredient-card h3{
     height: 35%;
-}
+} */
 
-.ingredientImage {
+.ingredient-image {
     width: 50px;
     height: 50px;
     background-color: var(--white);
