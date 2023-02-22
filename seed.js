@@ -1,17 +1,13 @@
-//run in terminal with:
-//node seed
+//run in terminal with: node seed.js
 
 //this will wipe out all orders and ingredients from the db
 //and load up the initial set of ingredients
-
-
 
 require('dotenv').config()
 require("./config/database")
 
 const Ingredients = require('./models/ingredient')
 const Orders = require("./models/order")
-
 
 ;(async function () {
     await Orders.deleteMany({})
@@ -30,11 +26,17 @@ const Orders = require("./models/order")
         {name:'Penne',price: 6.99, image:'penne.jpg', isAvailable:true},
         {name:'Orzo',price: 6.99, image:'orzo.png', isAvailable:true},
         {name:'Ravioli',price: 6.99, image:'ravioli.jpg', isAvailable:true},
-        {name:'Ravioli',price: 6.99, image:'ravioli.jpg', isAvailable:true},
+        {name:'Alfredo',price: 4.99, image:'alfredo.png', isAvailable:true},
+        {name:'Cauliflower',price: 2.99, image:'cauliflower.png', isAvailable:true},
+        {name:'Cheese Sauce',price: 4.99, image:'alfredo.png', isAvailable:true},
+        {name:'Feta',price: 4.99, image:'feta.png', isAvailable:true},
+        {name:'Marinara',price: 3.99, image:'marinara.png', isAvailable:true},
+        {name:'Parmesan',price: 4.99, image:'parme.jpeg', isAvailable:true},
+        {name:'Pecorino',price: 5.99, image:'pecorino.png', isAvailable:true},
+        {name:'Pesto',price: 4.99, image:'pesto.png', isAvailable:true},
+        {name:'Ricotta',price: 4.99, image:'ricotta.png', isAvailable:true},
+        {name:'Spicy Marinara',price: 3.99, image:'spicymarinara.png', isAvailable:true},
     ])
-
-
-console.log(ingredients)
 
 process.exit()
 })()

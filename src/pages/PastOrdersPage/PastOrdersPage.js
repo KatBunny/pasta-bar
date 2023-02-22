@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react"
+import { useEffect } from "react"
 import PastOrdersList from "../../components/PastOrdersList/PastOrdersList"
 import * as ordersAPI from "../../utilities/orders-api"
 
@@ -18,4 +18,4 @@ export default function PastOrdersPage({ showOrders, setShowOrders }){
             <PastOrdersList myOrders={showOrders}/>
         </div>
     )
-} 
+}

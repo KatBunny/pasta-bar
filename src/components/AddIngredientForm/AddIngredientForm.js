@@ -2,7 +2,7 @@ import { useState } from "react"
 import * as ingredientsAPI from "../../utilities/ingredients-api"
 import './AddIngredientForm.css'
 
-export default function AddIngredientForm({allIngredients, setAllIngredients, getAllAndAvailable}){
+export default function AddIngredientForm({getAllAndAvailable}){
     
     const intialData = {
         name: "New Ingredient",
@@ -30,7 +30,6 @@ export default function AddIngredientForm({allIngredients, setAllIngredients, ge
         event.preventDefault()
 
         //Add to the DB
-        //const createdIngredient = 
         await ingredientsAPI.create(newIngredient)
 
         //RE-RENDER THE LIST
