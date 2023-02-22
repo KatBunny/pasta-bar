@@ -36,7 +36,7 @@ async function login(req, res, next) {
         if(!user) throw new Error()
 
         //verify the password is correct
-        const passwordsMatch = bcrypt.compare(req.body.password, user.password)
+        const passwordsMatch = await bcrypt.compare(req.body.password, user.password)
 
         //if true create a JWT and send it back
         if (passwordsMatch) {
