@@ -2,7 +2,12 @@
 import "./Order.css"
 
 export default function Order({order}){
-    const ingredientItems = order.ingredients.map((ingredient, index) => (<div className="ingredients" key={index}><h3>{ingredient.name}</h3></div>))
+    const ingredientItems = order.ingredients.map((ingredient, index) => (
+        <div className="ingredients" key={index}>
+            <h3>{ingredient.name}</h3>
+            <img className='ingredientImage' src={`/images/icons/${ingredient.image}`} alt='Filler Image' />
+        </div>
+    ))
 
     return(
         <div className="order-container">
