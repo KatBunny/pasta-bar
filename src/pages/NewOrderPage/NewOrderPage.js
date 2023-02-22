@@ -21,10 +21,9 @@ export default function NewOrderPage({ availableIngredients, newOrder, setNewOrd
             const ingredient = availableIngredients.find(ingredient => ingredient._id === ingredientId)
             setNewOrder([...newOrder, ingredient])
         } else {
-            alert("You already have this in your order!")
+            // alert("You already have this in your order!")
         }
     }
-    //console.log(newOrder)
 
     // remove ingredient from order
     function handleRemoveIngredientFromOrder(ingredientId) {
@@ -38,13 +37,9 @@ export default function NewOrderPage({ availableIngredients, newOrder, setNewOrd
             user: user,
             ingredients: ingredientList
         }
-        
         await ordersAPI.create(finalizedOrder)
         navigate('/orders')
     }
-
-
-
 
     // order total
 
@@ -80,7 +75,6 @@ export default function NewOrderPage({ availableIngredients, newOrder, setNewOrd
                         />
                     </div>
                 </div>
-
                 <NewOrderBuilder
                     newOrder={newOrder}
                     removeFromOrder={handleRemoveIngredientFromOrder}
