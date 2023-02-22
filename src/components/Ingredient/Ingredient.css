@@ -31,7 +31,7 @@
     display: inline-block;
     width: 120px;
     min-width: none;
-    height: 170px;
+    height: 220px;
     border: var(--ebony) 2px solid;
     border-radius: 5px;
     vertical-align: top;
@@ -43,7 +43,7 @@
     display: inline-block;
     width: 120px;
     min-width: none;
-    height: 170px;
+    height: 220px;
     border: var(--ebony) 2px solid;
     border-radius: 5px;
     vertical-align: top;
@@ -51,6 +51,12 @@
     background-color: var(--blue);
     color: var(--white);
     background-color: var(--blue);
+}
+.btn-delete{
+    margin-top: 4vh;
+}
+.btn-add-order{
+    margin-top: 4vh;
 }
 
 .inline{
