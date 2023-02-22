@@ -37,7 +37,6 @@
     vertical-align: top;
     margin: 10px 5px 10px 5px;
     background-color: var(--green);
-    /* opacity: 0.7; */
 }
 
 .order-builder-ingredient-list .ingredient-card{
@@ -50,13 +49,13 @@
     vertical-align: top;
     margin: 10px 5px 10px 5px;
     background-color: var(--blue);
-    /* opacity: 0.7; */
-    color: #5B5941;
-    background-color: #E3F09B;
-    opacity: 0.7;
-
+    color: var(--white);
+    background-color: var(--blue);
 }
 .btn-delete{
+    margin-top: 4vh;
+}
+.btn-add-order{
     margin-top: 4vh;
 }
 
