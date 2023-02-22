@@ -1,44 +1,33 @@
-### For the Development Team
-- Fork and Clone this repo
-- cd pasta-bar
-- checkout a new branch
-- npm i
-- touch .env (Andrew will send development db connection info)
-- npm run build
-- npm start, nodemon server
-
-
-
 # iPasta!
 Build-your-own restaurants have been on the rise, but we have yet to see one to build your own pasta dish. For the pasta lovers, customize your own bowl of pasta!
 
-## Roles
-- Katherine | SCRUM master
-- Andrew | GitHub manager
-- Konstantin | Database manager
-- Mitchell | Designer/Documenter
-- Hanna | Designer/Documenter
+<figure>
+    <figcaption>Login</figcaption>
+    <img alt="Login" src="public/images/login-page.jpg" width="85%" height="85%">
+</figure>
+<figure>
+    <figcaption>Build your own pasta bowl</figcaption>
+    <img alt="new-order" src="public/images/new-order-page.jpg" width="85%" height="85%">
+</figure>
+<figure>
+    <figcaption>Edit menu page upon login as an admin</figcaption>
+    <img alt="edit-menu" src="public/images/edit-menu-page.jpg" width="85%" height="85%">
+</figure>
+<figure>
+    <figcaption>Order History</figcaption>
+    <img alt="order-history" src="public/images/order-history-page.jpg" width="85%" height="85%">
+</figure>
+
 
 ## Technologies used
 - JavaScript
-- CSS
-- MERN
+- HTML/CSS
+- MongoDB, Express, React, and Node
 
 ## Getting Started
+- Deployed website: [iPasta](https://ipasta.onrender.com/)
 - [Project planning](https://trello.com/invite/b/u6XD04Yr/ATTIa6f6a65e5e14502596b753d09759abec7BC08F30/pasta-bar)
 - [Pitck deck](https://docs.google.com/presentation/d/1rPvgnreUqrph27inIy1vy3vsMNEOonbVnSwRqAZDFOg/edit?usp=sharing)
-
-### Wireframes
-<figure>
-    <figcaption></figcaption>
-    <img alt="wireframes" src="images/wireframes.jpg" width="70%" height="70%">
-</figure>
-
-### ERD
-<figure>
-    <figcaption></figcaption>
-    <img alt="erd" src="images/erd.png" width="70%" height="70%">
-</figure>
 
 
 ## Next Steps
@@ -48,3 +37,12 @@ Build-your-own restaurants have been on the rise, but we have yet to see one to 
 - AAU, I would like to specify ingredient amount( light, normal, extra).
 ### Version 3
 - AAU, I would like a discount for trying a mystery pasta.
+
+### For the Development Team
+- Fork and Clone this repo
+- `cd pasta-bar`
+- checkout a new branch
+- `npm i`
+- `touch .env` (Andrew will send development db connection info)
+- `npm run build`
+- `npm start`, `nodemon server`
