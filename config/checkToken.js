@@ -3,8 +3,6 @@ const jwt = require("jsonwebtoken")
 function checkToken(req, res, next) {
     let token = req.get("Authorization") || req.query.token 
 
-    //console.log("Check Token: " + token)
-
     if(token) {
         //Remove "Bearer"
         token = token.replace("Bearer ", "")
