@@ -5,9 +5,14 @@ import NewOrderBuilder from "../../components/NewOrderBuilder/NewOrderBuilder";
 import * as ordersAPI from "../../utilities/orders-api";
 import "./NewOrderPage.css"
 
-//needs to be sent allIngredients or we
-//can filter it in App
-export default function NewOrderPage({ availableIngredients, newOrder, setNewOrder, user, setUser, orderTotal, setOrderTotal }) {
+export default function NewOrderPage({
+    availableIngredients,
+    newOrder,
+    setNewOrder,
+    user,
+    orderTotal,
+    setOrderTotal
+}) {
     const navigate = useNavigate()
 
     // add ingredient to order when ingredient item is clicked
@@ -15,9 +20,8 @@ export default function NewOrderPage({ availableIngredients, newOrder, setNewOrd
         const alreadyExists = newOrder.filter(ingredient => ingredient._id === ingredientId)
         
         //Check if ingredient is already in newOrder
-        //const testerIngredient = {_id: ingredientId}
         if(alreadyExists.length === 0)  {
-            //actually add the ingredient
+            //add the ingredient
             const ingredient = availableIngredients.find(ingredient => ingredient._id === ingredientId)
             setNewOrder([...newOrder, ingredient])
         } else {
@@ -42,15 +46,6 @@ export default function NewOrderPage({ availableIngredients, newOrder, setNewOrd
     }
 
     // order total
-
-    //should we move this function to app.js and pass the results down to here? 
-
-    //seeing this warning in react server (npm start)
-
-    //WARNING in [eslint] 
-    // src/pages/NewOrderPage/NewOrderPage.js
-    // Line 67:8:  React Hook useEffect has a missing dependency: 'setOrderTotal'. Either include it or remove the dependency array. If 'setOrderTotal' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
-
     useEffect(function(){
         async function getOrderTotal(){
             let updatedTotal = 0
@@ -61,6 +56,10 @@ export default function NewOrderPage({ availableIngredients, newOrder, setNewOrd
         }
         getOrderTotal()
     }, [newOrder])
+    //every time newOrder state changes, setOrderTotal is called,
+    //which changes the state of newOrder..........
+
+
 
     return (
         <>
@@ -85,6 +84,4 @@ export default function NewOrderPage({ availableIngredients, newOrder, setNewOrd
             </div>
         </>
     )
-
 }
-

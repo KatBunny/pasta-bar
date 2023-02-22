@@ -18,16 +18,15 @@ export default function AuthPage({ setUser }) {
             ) : (
                 <LoginForm setUser={setUser} />
             )}
-
-                {showSignUp ? 
-                    <>
-                        <p>Already have an account? Login <a className="authpage-link" onClick={()=> setShowSignUp(!showSignUp)}>here</a></p>
-                    </>
+            {showSignUp ? 
+                <>
+                    <p>Already have an account? Login <a className="authpage-link" onClick={()=> setShowSignUp(!showSignUp)} href="">here</a></p>
+                </>
                 : 
                 <>
-                    <p>First time ordering? Sign up <a className="authpage-link" onClick={()=> setShowSignUp(!showSignUp)}>here</a></p>
-                </>}
-
+                    <p>First time ordering? Sign up <a className="authpage-link" onClick={()=> setShowSignUp(!showSignUp)} href="">here</a></p>
+                </>
+            }
         </>
     )
 }

@@ -20,12 +20,14 @@ export default function EditIngredientForm({ingredient, getAllAndAvailable}){
             [event.target.name]: event.target.value
         })
     }
+
     function handleCheck(event) {
         setEditedIngredient({
             ...editedIngredient,
             [event.target.name]: !editedIngredient.isAvailable
         })
     }
+
     async function handleDelete(event) {
         event.preventDefault()
 
@@ -40,15 +42,12 @@ export default function EditIngredientForm({ingredient, getAllAndAvailable}){
         event.preventDefault()
 
         //Update the DB
-        //const updatedIngredient = 
         await ingredientsAPI.update(ingredient._id, editedIngredient)
 
         //RE-RENDER THE LIST
         getAllAndAvailable()
         setEditedIngredient(initialData)
     }
-
-    
 
     return (
         <form className="edit-form" autoComplete="off">

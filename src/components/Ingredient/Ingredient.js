@@ -1,20 +1,16 @@
 // Specific ingredient item
 import EditIngredientForm from '../EditIngredientForm/EditIngredientForm'
-
 import "./Ingredient.css"
 
 export default function Ingredient({
-    ingredient, 
-    user, 
+    ingredient,
     addToOrder, 
     removeFromOrder, 
     isInNewOrder, 
     isEditing,
     getAllAndAvailable
 }){
-//../../images/icons/${ingredient.image}
 
-//images/icons/
     return(
         <div className='ingredient-container ingredient-card'>
             <div className='ingredient-card-details'>
@@ -36,7 +32,7 @@ export default function Ingredient({
                     isInNewOrder ?
                         <button className="btn-delete" onClick={() => removeFromOrder(ingredient._id)}>➖</button>
                         :
-                        <button onClick={() => addToOrder(ingredient._id)}>➕</button>
+                        <button className='btn-add-order' onClick={() => addToOrder(ingredient._id)}>➕</button>
                 }
                 </div>
             </div>
