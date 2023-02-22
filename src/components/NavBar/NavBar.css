@@ -1,11 +1,12 @@
 .icon {
-  margin: auto 5vw auto 2vw;
+  margin-left: 2vw;
   padding: 12.5px;
   border: 2px solid black;
   border-radius: 60%;
   background-color: white;
   height: 50px;
   width: 50px;
+  margin-top: 9vh;
 }
 .title {
   /* display: inline-flex; */
@@ -14,6 +15,8 @@
   margin-right: auto;
 }
 .NavBar {
+  border-bottom: 2px solid black;
+  width: 85vw;
 }
 .links {
   /* margin-right: 2vh; */
@@ -29,13 +32,7 @@
   color: red;
 }
 
-.links:click {
-  /* color: white; */
-}
-
 .design {
   display: flex;
-  /* flex-direction: row;
-    align-content: flex-end;
-    justify-content: flex-end; */
+  
 }

@@ -11,7 +11,7 @@ export default function NavBar({user, setUser, order, resetOrder}) {
     }
 
     return(
-        <nav className="NavBar">
+        <nav >
             <div className="design">
             <h1 className="title">iPasta!</h1>
             
@@ -25,6 +25,7 @@ export default function NavBar({user, setUser, order, resetOrder}) {
             
             <span className="icon">{user.name.charAt(0).toUpperCase()}</span>
             </div>
+            <hr className="NavBar"/>
         </nav>
     )
 }
