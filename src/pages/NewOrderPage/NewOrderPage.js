@@ -72,7 +72,7 @@ export default function NewOrderPage({
   return (
     <>
       <h1>
-        Welcom Back, {userName.charAt(0).toUpperCase() + userName.slice(1)}
+        Welcome Back, {userName.charAt(0).toUpperCase() + userName.slice(1)}
       </h1>
       <h2>Create your pasta</h2>
       <div className="new-orders-container">

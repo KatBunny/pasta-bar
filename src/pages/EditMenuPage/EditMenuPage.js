@@ -12,7 +12,7 @@ export default function EditMenuPage({
   return (
     <>
       <h1>
-        Welcom Back, {userName.charAt(0).toUpperCase() + userName.slice(1)}
+        Welcome Back, {userName.charAt(0).toUpperCase() + userName.slice(1)}
       </h1>
       <AddIngredientForm getAllAndAvailable={getAllAndAvailable} />
       <div className="edit-list-container">
