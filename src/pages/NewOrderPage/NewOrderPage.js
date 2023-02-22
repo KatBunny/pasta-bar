@@ -25,7 +25,7 @@ export default function NewOrderPage({
             const ingredient = availableIngredients.find(ingredient => ingredient._id === ingredientId)
             setNewOrder([...newOrder, ingredient])
         } else {
-            alert("You already have this in your order!")
+            // alert("You already have this in your order!")
         }
     }
 
@@ -70,7 +70,6 @@ export default function NewOrderPage({
                         />
                     </div>
                 </div>
-
                 <NewOrderBuilder
                     newOrder={newOrder}
                     removeFromOrder={handleRemoveIngredientFromOrder}
