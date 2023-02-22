@@ -18,15 +18,17 @@ export default function App() {
   const [orderTotal, setOrderTotal] = useState(0)
 
   async function getAllAndAvailable() {
+   if(user) {
     const ingredients = await ingredientsAPI.show()
     const listOfAvailable = ingredients.filter(ingredient => ingredient.isAvailable)
     setAllIngredients(ingredients)
     setAvailableIngredients(listOfAvailable)
+    }
   }
 
   useEffect(function() {
     getAllAndAvailable()
-  }, []
+  }, [user]
   );
 
   return (
