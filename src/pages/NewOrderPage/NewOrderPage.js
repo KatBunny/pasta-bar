@@ -56,6 +56,10 @@ export default function NewOrderPage({
         }
         getOrderTotal()
     }, [newOrder])
+    //every time newOrder state changes, setOrderTotal is called,
+    //which changes the state of newOrder..........
+
+
 
     return (
         <>
