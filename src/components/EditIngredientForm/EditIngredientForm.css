@@ -21,7 +21,7 @@
     margin-bottom: 3vh;
     margin-right: 5vw;
     margin-top: 1.5vh;
-    
+    min-width: fit-content;
 }
 .inputss{
     margin-right: auto;

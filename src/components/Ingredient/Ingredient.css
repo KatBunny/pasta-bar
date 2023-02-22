@@ -80,6 +80,12 @@
     color: var(--white);
     background-color: var(--blue);
 }
+.btn-delete{
+    margin-top: 4vh;
+}
+.btn-add-order{
+    margin-top: 4vh;
+}
 
 .order-builder-ingredient-list .ingredient-card-details {
     display: inline-flex;
